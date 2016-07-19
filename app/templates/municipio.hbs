@@ -1,5 +1,6 @@
 <header class="place">
-  {{app-graphics-municipio-links}}
+  {{!-- TODO: Pendiente de implementar --}}
+  {{!-- {{app-graphics-municipio-links}} --}}
 
   <div class="breadcrumb geo">
     Aragón » Zaragoza
@@ -20,74 +21,11 @@
     Zaragoza
   </h1>
 
-  <div class="share_links">
-    <a
-      class="small_button popup"
-      data-rel="Twitter"
-      href="https://twitter.com/home?status=En%20%40gobierto%3A%20Presupuestos%20municipales%20de%20Zaragoza%20del%202015%20https%3A%2F%2Fpresupuestos.gobierto.es%2Fplaces%2Fzaragoza%2F2015"
-    >
-        <i class="fa fa-twitter"></i>
-    </a>
-    <a
-      class="small_button popup"
-      data-rel="Facebook"
-      href="http://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpresupuestos.gobierto.es%2Fplaces%2Fzaragoza%2F2015"
-    >
-      <i class="fa fa-facebook"></i>
-    </a>
-  </div>
+  {{!-- TODO: Pendiente de implementar --}}
+  {{!-- {{app-graphics-municipio-sharing-links}} --}}
 </header>
 
-<header class="sticky_top" style="opacity: 0; display: none;">
-  <a href="/">
-    <img src="/assets/Gobierto-Avatar@2x-3b3e639a0e0ee13213cef48aa336b233072d17689b95887788c48f529e16ddf6.png" alt="Gobierto avatar@2x" width="30" height="30">
-  </a>
-  <input type="text" class="places_search search_auto" value="Zaragoza" placeholder="Busca municipio..." autocomplete="off">
-</header>
-
-<div class="main_metrics clearfix">
-  <div class="metric selected" data-widget-template="#widget-template" data-widget-type="per_person" data-line-widget-series="means" data-line-widget-url="/api/data/lines/50297/2015/per_person.json" data-line-widget-type="per_person" data-widget-data-url="/api/data/widget/total_budget_per_inhabitant/50297/2015.json">
-    <div class="label">Gasto por habitante</div>
-    <div class="main sign-up">1.027 €</div>
-    <div class="secondary">
-      <div class="percentage_change up sign-up">2,56%</div>
-      <div class="ranking">
-        <a href="/ranking/2015/G/economic/amount_per_inhabitant?ine_code=50297&amp;page=113" class="ranking_link">
-          <strong>#2804</strong>/8119</a></div>
-    </div>
-  </div>
-
-  <div class="metric" data-widget-template="#widget-template" data-widget-type="total_budget" data-line-widget-series="means" data-line-widget-url="/api/data/lines/50297/2015/total_budget.json" data-line-widget-type="total_budget" data-widget-data-url="/api/data/widget/total_budget/50297/2015.json">
-    <div class="label">Gasto total</div>
-    <div class="main sign-up">683 M€</div>
-    <div class="secondary">
-      <div class="percentage_change up sign-up">2,39%</div>
-      <div class="ranking"><a href="/ranking/2015/G/economic/amount?ine_code=50297&amp;page=1" class="ranking_link"><strong>#5</strong>/8119</a></div>
-    </div>
-  </div>
-
-  <div class="metric" data-widget-template="#widget-template" data-widget-type="population" data-widget-data-url="/api/data/widget/population/50297/2015.json">
-    <div class="label">Habitantes</div>
-    <div class="main sign-down">664.953</div>
-    <div class="secondary">
-      <div class="percentage_change up sign-down">-0,17%</div>
-      <div class="ranking"><a href="/ranking/2015/population?ine_code=50297&amp;page=1" class="ranking_link"><strong>#5</strong>/8119</a></div>
-    </div>
-  </div>
-
-  <div class="metric" data-widget-template="#widget-template-execution" data-widget-type="total_budget_execution" data-widget-data-url="/api/data/widget/total_widget_execution/50297/2015.json">
-    <div class="label">Ejecución vs Presupuestado</div>
-    <div class="main sign-up">9,56 % (65 M€)</div>
-  </div>
-
-  <div class="metric" data-widget-template="#widget-template-debt" data-widget-type="debt" data-widget-data-url="/api/data/widget/debt/50297/2015.json">
-    <div class="label">Deuda viva</div>
-    <div class="main ">1.069.679.000 €</div>
-    <div class="secondary">
-      <div class="percentage_change up ">-23,58%</div>
-    </div>
-  </div>
-</div>
+{{app-graphics-municipio-main-metrics}}
 
 <div class="metric_graphs clearfix">
   <div class="widget_graph show clearfix">
