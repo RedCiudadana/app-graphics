@@ -1,0 +1,68 @@
+<div class="tools_cont">
+  <div id="sticky-wrapper" class="sticky-wrapper" style="height: 27px;">
+    <div class="tools sticky" style="z-index: 10;">
+      <div class="modal_widget" id="follow">
+        <a
+          id="follow_link"
+          class="tool_button tipsit"
+          href="#"
+          original-title="Suscríbete a las actualizaciones en Zaragoza"
+        >
+          <span>Seguir (0)</span> <i class="fa fa-star-o"></i>
+        </a>
+
+        <div class="inner widget_follow budget_line_feedback" id="user_signup">
+          <p>Puedes guardar Zaragoza como favorito para recibir actualizaciones de datos y nueva información sobre este presupuesto.</p>
+          <form
+            id="new-user-follow"
+            class="new_user"
+            data-remote="true"
+            action="/users/identify"
+            accept-charset="UTF-8"
+            method="post"
+          >
+            <input name="utf8" type="hidden" value="✓">
+            <input type="hidden" name="authenticity_token" value="JjPvWQlNIAqj3GJHejg7kXwDrN1ANYHjqnRUG54g7tqlQN7dteeTL4XoLdqugzbd65XWnNPAzcbQ5jNt89KH2g==">
+            <input placeholder="Tu correo-e" type="email" name="user[email]" id="user_email">
+            <input type="hidden" name="follow" id="follow" value="50297">
+            <input type="hidden" name="context" id="context" value="new-user-follow">
+            <input type="submit" name="commit" value="Seguir">
+
+            <div class="exp">
+              <p>No spam, tus opiniones serán siempre privadas <a target="blank" href="/faq">Más información</a></p>
+            </div>
+          </form>
+          <div class="share_post_submit hidden">
+            <p class="highlight">Haz click en el link que te hemos enviado por email para validar tu cuenta y confirmar tu acción</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal_widget" id="compare">
+        <a class="tool_button" href=""><span>Compara</span> <i class="fa fa-compass"></i></a>
+        <div class="inner widget_compare">
+          <a class="button js-add_compare" data-place="Zaragoza|/places/zaragoza/2015|zaragoza" data-parent-code="null" href="">Añade <strong>Zaragoza</strong> a tu lista y compara</a>
+          <div class="sep"></div>
+          <p>Tu lista de comparación</p>
+          <ul id="compare_list">
+          </ul>
+          <div id="view_comp_container" class="center" style="display: none;">
+            <a id="view_compare" class="button" data-parent-code="null" href="">Ver comparación</a>
+            <span class="soft" id="without_current_note">(sin Zaragoza)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal_widget" id="in_your_web">
+        <a class="tool_button" href=""><span>En tu web</span> <i class="fa fa-share"></i></a>
+        <div class="inner widget_share">
+          <div class="cta_claim">
+            <h3>¿Eres responsable de este municipio?</h3>
+            <p>Gobierto te permite hacer una integración personalizada de estas visualizaciones en tu web.</p>
+            <a class="button" href="/users/new?place_id=50297&amp;pro=true">Solicita información</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
