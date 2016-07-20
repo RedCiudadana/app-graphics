@@ -2,15 +2,18 @@
   {{!-- TODO: Pendiente de implementar --}}
   {{!-- {{app-graphics-municipio-links}} --}}
 
-  {{!-- Model count: {{model.length}} --}}
+  {{log 'Current model: ' model}}
 
   <div class="breadcrumb geo">
-    Aragón » Zaragoza
+    {{model.departamento}} » {{model.nombreMunicipio}}
   </div>
 
   <h1 title="Presupuestos municipales de Zaragoza">
-    <div class="switcher year_switcher">
-      <a class="current" href="">2015 <i class="fa fa-angle-down"></i></a>
+    {{!-- <div class="switcher year_switcher">
+      <a class="current" href="">
+        2015
+        <i class="fa fa-angle-down"></i>
+      </a>
       <ul>
           <li><a href="/places/zaragoza/2015">2015</a></li>
           <li><a href="/places/zaragoza/2014">2014</a></li>
@@ -19,8 +22,8 @@
           <li><a href="/places/zaragoza/2011">2011</a></li>
           <li><a href="/places/zaragoza/2010">2010</a></li>
       </ul>
-    </div>
-    Zaragoza
+    </div> --}}
+    2016 {{model.nombreMunicipio}}
   </h1>
 
   {{!-- TODO: Pendiente de implementar --}}
