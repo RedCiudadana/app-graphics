@@ -1,0 +1,193 @@
+<div class="ie_intro clearfix">
+  <div class="cont-expenses">
+    <header class="cat expenses">
+      <h2><a data-rel="cont-switch" data-target="cont-income" href="#">Ingresos</a></h2>
+      <span class="sep">|</span>
+      <h2>Gastos</h2>
+
+      <div class="form_filters">
+        <ul>
+          <li><a class="toggle" id="Economica" data-remote="true" href="/places/zaragoza/2015?area=economic">Económica</a></li>
+          <li><a class="toggle buttonSelected" id="Funcional" data-remote="true" href="/places/zaragoza/2015?area=functional">Funcional</a></li>
+        </ul>
+      </div>
+
+      <div id="total_expense_budget" class="qty">683.159.538 €</div>
+    </header>
+
+    <div class="graph" id="expense-treemap" data-functional-url="/places/zaragoza/2015/G/functional.json" data-economic-url="/places/zaragoza/2015/G/economic.json" style="position: relative; width: 1552px; height: 282.182px; left: 0px; top: 0px;"><div class="tipsit-treemap treemap_node clickable" original-title="<strong>functional</strong><br>0 €<br>0 € /hab" style="left: 0px; top: 0px; width: 1552px; height: 282.182px; background: rgb(31, 63, 79);"></div><div class="tipsit-treemap treemap_node clickable" data-url="/places/zaragoza/2015/G/functional.json?parent_code=1" original-title="<strong>Servicios públicos básicos</strong><br>224.888.058 €<br>338 € /hab" style="left: 0px; top: 0px; width: 511px; height: 282.182px; background: rgb(255, 188, 200);"><p><strong>Servicios públicos básicos</strong></p><p>338 €/hab</p></div><div class="tipsit-treemap treemap_node clickable" data-url="/places/zaragoza/2015/G/functional.json?parent_code=9" original-title="<strong>Actuaciones de carácter general</strong><br>162.747.077 €<br>245 € /hab" style="left: 511px; top: 0px; width: 370px; height: 282.182px; background: rgb(255, 97, 129);"><p><strong>Actuaciones de carácter general</strong></p><p>245 €/hab</p></div><div class="tipsit-treemap treemap_node clickable" data-url="/places/zaragoza/2015/G/functional.json?parent_code=4" original-title="<strong>Actuaciones de carácter económico</strong><br>86.425.421 €<br>130 € /hab" style="left: 881px; top: 0px; width: 367px; height: 151px; background: rgb(238, 38, 87);"><p><strong>Actuaciones de carácter económico</strong></p><p>130 €/hab</p></div><div class="tipsit-treemap treemap_node clickable" data-url="/places/zaragoza/2015/G/functional.json?parent_code=3" original-title="<strong>Producción de bienes públicos de carácter preferente</strong><br>75.195.999 €<br>113 € /hab" style="left: 881px; top: 151px; width: 367px; height: 131.182px; background: rgb(140, 48, 68);"><p><strong>Producción de bienes públicos de carácter preferente</strong></p><p>113 €/hab</p></div><div class="tipsit-treemap treemap_node clickable" data-url="/places/zaragoza/2015/G/functional.json?parent_code=2" original-title="<strong>Actuaciones de protección y promoción social</strong><br>74.329.904 €<br>112 € /hab" style="left: 1248px; top: 0px; width: 304px; height: 157px; background: rgb(81, 103, 115);"><p><strong>Actuaciones de protección y promoción social</strong></p><p>112 €/hab</p></div><div class="tipsit-treemap treemap_node clickable" data-url="/places/zaragoza/2015/G/functional.json?parent_code=0" original-title="<strong>Deuda pública</strong><br>59.573.079 €<br>90 € /hab" style="left: 1248px; top: 157px; width: 304px; height: 125.182px; background: rgb(66, 121, 145);"><p><strong>Deuda pública</strong></p><p>90 €/hab</p></div></div>
+
+    <div class="items">
+      <table id="expense_lines">
+        <tbody>
+          <tr>
+            <th>
+              <input type="text" placeholder="Busca partidas de gastos" class="search_items search_categories_budget-expense" data-search-url="/categories/zaragoza/2015/functional/G" autocomplete="off">
+            </th>
+            <th class="right ">gasto total</th>
+            <th class="right ">gasto por hab.</th>
+            <th class="right ">% s/ total</th>
+            <th class="bar_cont"></th>
+          </tr>
+          <tr id="code_0_functional_G">
+            <td class="item_name">
+                <a data-remote="true" href="/places/zaragoza/2015/G/functional?parent_code=0"><i class="fa fa-plus-square-o"></i></a>
+              <a href="/budget_lines/zaragoza/2015/0/G/functional">Deuda pública</a>
+            </td>
+            <td class="right total">59.573.079 €</td>
+            <td class="right per_hab">90 €</td>
+            <td class="right percentage"><strong>8,72%</strong></td>
+            <td class="bar_cont"><div class="bar" style="width:8,72%"></div></td>
+          </tr>
+          <tr id="code_1_functional_G">
+            <td class="item_name">
+                <a data-remote="true" href="/places/zaragoza/2015/G/functional?parent_code=1"><i class="fa fa-plus-square-o"></i></a>
+              <a href="/budget_lines/zaragoza/2015/1/G/functional">Servicios públicos básicos</a>
+            </td>
+            <td class="right total">224.888.058 €</td>
+            <td class="right per_hab">338 €</td>
+            <td class="right percentage"><strong>32,92%</strong></td>
+            <td class="bar_cont"><div class="bar" style="width:32,92%"></div></td>
+          </tr>
+          <tr id="code_2_functional_G">
+            <td class="item_name">
+                <a data-remote="true" href="/places/zaragoza/2015/G/functional?parent_code=2"><i class="fa fa-plus-square-o"></i></a>
+              <a href="/budget_lines/zaragoza/2015/2/G/functional">Actuaciones de protección y promoción social</a>
+            </td>
+            <td class="right total">74.329.904 €</td>
+            <td class="right per_hab">112 €</td>
+            <td class="right percentage"><strong>10,88%</strong></td>
+            <td class="bar_cont"><div class="bar" style="width:10,88%"></div></td>
+          </tr>
+          <tr id="code_3_functional_G">
+            <td class="item_name">
+                <a data-remote="true" href="/places/zaragoza/2015/G/functional?parent_code=3"><i class="fa fa-plus-square-o"></i></a>
+              <a href="/budget_lines/zaragoza/2015/3/G/functional">Producción de bienes públicos de carácter preferente</a>
+            </td>
+            <td class="right total">75.195.999 €</td>
+            <td class="right per_hab">113 €</td>
+            <td class="right percentage"><strong>11,01%</strong></td>
+            <td class="bar_cont"><div class="bar" style="width:11,01%"></div></td>
+          </tr>
+          <tr id="code_4_functional_G">
+            <td class="item_name">
+                <a data-remote="true" href="/places/zaragoza/2015/G/functional?parent_code=4"><i class="fa fa-plus-square-o"></i></a>
+              <a href="/budget_lines/zaragoza/2015/4/G/functional">Actuaciones de carácter económico</a>
+            </td>
+            <td class="right total">86.425.421 €</td>
+            <td class="right per_hab">130 €</td>
+            <td class="right percentage"><strong>12,65%</strong></td>
+            <td class="bar_cont"><div class="bar" style="width:12,65%"></div></td>
+          </tr>
+          <tr id="code_9_functional_G">
+            <td class="item_name">
+                <a data-remote="true" href="/places/zaragoza/2015/G/functional?parent_code=9"><i class="fa fa-plus-square-o"></i></a>
+              <a href="/budget_lines/zaragoza/2015/9/G/functional">Actuaciones de carácter general</a>
+            </td>
+            <td class="right total">162.747.077 €</td>
+            <td class="right per_hab">245 €</td>
+            <td class="right percentage"><strong>23,82%</strong></td>
+            <td class="bar_cont"><div class="bar" style="width:23,82%"></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="cont-income hidden">
+    <header class="cat incomes">
+      <h2>Ingresos</h2>
+      <span class="sep">|</span>
+      <h2><a data-rel="cont-switch" data-target="cont-expenses" href="#">Gastos</a></h2>
+      <div class="qty">683.159.538 €</div>
+    </header>
+
+    <div class="graph" id="income-treemap" data-economic-url="/places/zaragoza/2015/I/economic.json" style="position: relative; left: 0px; top: 0px;"><div class="tipsit-treemap treemap_node clickable" original-title="<strong>economic</strong><br>0 €<br>0 € /hab" style="left: 0px; top: 0px; background: rgb(71, 61, 63);"></div><div class="tipsit-treemap treemap_node clickable" data-url="/places/zaragoza/2015/I/economic.json?parent_code=1" original-title="<strong>Impuestos directos</strong><br>278.950.540 €<br>420 € /hab" style="left: 0px; top: 0px; background: rgb(255, 188, 200);"></div><div class="tipsit-treemap treemap_node clickable" data-url="/places/zaragoza/2015/I/economic.json?parent_code=4" original-title="<strong>Transferencias corrientes</strong><br>246.356.270 €<br>370 € /hab" style="left: 0px; background: rgb(255, 97, 129);"></div><div class="tipsit-treemap treemap_node clickable" data-url="/places/zaragoza/2015/I/economic.json?parent_code=3" original-title="<strong>Tasas y otros ingresos</strong><br>117.570.000 €<br>177 € /hab" style="left: 0px; background: rgb(238, 38, 87);"></div><div class="tipsit-treemap treemap_node clickable" data-url="/places/zaragoza/2015/I/economic.json?parent_code=2" original-title="<strong>Impuestos indirectos</strong><br>26.162.718 €<br>39 € /hab" style="left: 0px; background: rgb(140, 48, 68);"></div><div class="tipsit-treemap treemap_node clickable" data-url="/places/zaragoza/2015/I/economic.json?parent_code=7" original-title="<strong>Transferencias de capital</strong><br>10.800.000 €<br>16 € /hab" style="left: 0px; background: rgb(81, 103, 115);"></div><div class="tipsit-treemap treemap_node clickable" data-url="/places/zaragoza/2015/I/economic.json?parent_code=5" original-title="<strong>Ingresos patrimoniales</strong><br>2.820.010 €<br>4 € /hab" style="left: 0px; background: rgb(66, 121, 145);"></div><div class="tipsit-treemap treemap_node clickable" data-url="/places/zaragoza/2015/I/economic.json?parent_code=8" original-title="<strong>Activos financieros</strong><br>500.000 €<br>1 € /hab" style="left: 0px; background: rgb(31, 63, 79);"></div></div>
+
+    <div class="items">
+      <table>
+        <tbody>
+          <tr>
+            <th>
+              <input type="text" placeholder="Busca partidas de ingresos" class="search_items search_categories_budget-income" data-search-url="/categories/zaragoza/2015/economic/I" autocomplete="off">
+            </th>
+            <th class="right ">ingreso total</th>
+            <th class="right ">ingreso por hab.</th>
+            <th class="right ">% s/ total</th>
+            <th class="bar_cont"></th>
+          </tr>
+          <tr id="code_1_economic_I">
+            <td class="item_name">
+              <a data-remote="true" href="/places/zaragoza/2015/I/economic?parent_code=1"><i class="fa fa-plus-square-o"></i></a>
+              <a href="/budget_lines/zaragoza/2015/1/I/economic">Impuestos directos</a>
+            </td>
+            <td class="right total">278.950.540 €</td>
+            <td class="right per_hab">420 €</td>
+            <td class="right percentage"><strong>40,83%</strong></td>
+            <td class="bar_cont"><div class="bar" style="width:40,83%"></div></td>
+          </tr>
+          <tr id="code_2_economic_I">
+            <td class="item_name">
+                <a data-remote="true" href="/places/zaragoza/2015/I/economic?parent_code=2"><i class="fa fa-plus-square-o"></i></a>
+              <a href="/budget_lines/zaragoza/2015/2/I/economic">Impuestos indirectos</a>
+            </td>
+            <td class="right total">26.162.718 €</td>
+            <td class="right per_hab">39 €</td>
+            <td class="right percentage"><strong>3,83%</strong></td>
+            <td class="bar_cont"><div class="bar" style="width:3,83%"></div></td>
+          </tr>
+          <tr id="code_3_economic_I">
+            <td class="item_name">
+                <a data-remote="true" href="/places/zaragoza/2015/I/economic?parent_code=3"><i class="fa fa-plus-square-o"></i></a>
+              <a href="/budget_lines/zaragoza/2015/3/I/economic">Tasas y otros ingresos</a>
+            </td>
+            <td class="right total">117.570.000 €</td>
+            <td class="right per_hab">177 €</td>
+            <td class="right percentage"><strong>17,21%</strong></td>
+            <td class="bar_cont"><div class="bar" style="width:17,21%"></div></td>
+          </tr>
+          <tr id="code_4_economic_I">
+            <td class="item_name">
+                <a data-remote="true" href="/places/zaragoza/2015/I/economic?parent_code=4"><i class="fa fa-plus-square-o"></i></a>
+              <a href="/budget_lines/zaragoza/2015/4/I/economic">Transferencias corrientes</a>
+            </td>
+            <td class="right total">246.356.270 €</td>
+            <td class="right per_hab">370 €</td>
+            <td class="right percentage"><strong>36,06%</strong></td>
+            <td class="bar_cont"><div class="bar" style="width:36,06%"></div></td>
+          </tr>
+          <tr id="code_5_economic_I">
+            <td class="item_name">
+                <a data-remote="true" href="/places/zaragoza/2015/I/economic?parent_code=5"><i class="fa fa-plus-square-o"></i></a>
+              <a href="/budget_lines/zaragoza/2015/5/I/economic">Ingresos patrimoniales</a>
+            </td>
+            <td class="right total">2.820.010 €</td>
+            <td class="right per_hab">4 €</td>
+            <td class="right percentage"><strong>0,41%</strong></td>
+            <td class="bar_cont"><div class="bar" style="width:0,41%"></div></td>
+          </tr>
+          <tr id="code_7_economic_I">
+            <td class="item_name">
+                <a data-remote="true" href="/places/zaragoza/2015/I/economic?parent_code=7"><i class="fa fa-plus-square-o"></i></a>
+              <a href="/budget_lines/zaragoza/2015/7/I/economic">Transferencias de capital</a>
+            </td>
+            <td class="right total">10.800.000 €</td>
+            <td class="right per_hab">16 €</td>
+            <td class="right percentage"><strong>1,58%</strong></td>
+            <td class="bar_cont"><div class="bar" style="width:1,58%"></div></td>
+          </tr>
+          <tr id="code_8_economic_I">
+            <td class="item_name">
+                <a data-remote="true" href="/places/zaragoza/2015/I/economic?parent_code=8"><i class="fa fa-plus-square-o"></i></a>
+              <a href="/budget_lines/zaragoza/2015/8/I/economic">Activos financieros</a>
+            </td>
+            <td class="right total">500.000 €</td>
+            <td class="right per_hab">1 €</td>
+            <td class="right percentage"><strong>0,07%</strong></td>
+            <td class="bar_cont"><div class="bar" style="width:0,07%"></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
