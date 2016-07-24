@@ -3,7 +3,9 @@
   {{!-- Gasto por habitante --}}
   <div class="metric selected">
     <div class="label">Gasto por habitante</div>
-    <div class="main sign-up">{{municipio.gastoHabitante}} Q</div>
+    <div class="main sign-up">
+      {{format-money municipio.gastoHabitante symbol="Q"}}
+    </div>
     {{!-- TODO: Pendiente definir qué es esto --}}
     {{!-- <div class="secondary">
       <div class="percentage_change up sign-up">2,56%</div>
@@ -18,7 +20,9 @@
   {{!-- Gasto total --}}
   <div class="metric">
     <div class="label">Gasto total</div>
-    <div class="main sign-up">{{municipio.gastoTotal}} Q</div>
+    <div class="main sign-up">
+      {{format-money municipio.gastoTotal symbol="Q"}}
+    </div>
     {{!-- TODO: Pendiente definir qué es esto --}}
     {{!-- <div class="secondary">
       <div class="percentage_change up sign-up">2,39%</div>
@@ -33,7 +37,9 @@
   {{!-- Habitantes --}}
   <div class="metric">
     <div class="label">Habitantes</div>
-    <div class="main sign-down">{{municipio.poblacion}}</div>
+    <div class="main sign-down">
+      {{format-number municipio.poblacion}}
+    </div>
     {{!-- TODO: Pendiente definir qué es esto --}}
     {{!-- <div class="secondary">
       <div class="percentage_change up sign-down">-0,17%</div>
@@ -45,7 +51,9 @@
   <div class="metric">
     <div class="label">Ejecución vs Presupuestado</div>
     {{!-- TODO: Evaluar convertir en CP --}}
-    <div class="main sign-up">{{porcentajeEjecucion}} % ({{municipio.gastoTotal}}Q)</div>
+    <div class="main sign-up">
+      {{porcentajeEjecucion}} % ({{format-number municipio.gastoTotal symbol="Q"}})
+    </div>
   </div>
 
   {{!-- Deuda vive --}}
