@@ -1,9 +1,17 @@
 <div class="metric_graphs clearfix">
   <div class="widget_graph show clearfix">
-    <div class="col-1-2" id="lines_chart"><svg width="982" height="387.6923076923077" class="svg_lines"><g transform="translate(0,30)"><g class="x axis" transform="translate(0,327.6923076923077)"><g class="tick" transform="translate(20,0)" style="opacity: 1;"><line y2="6" x2="0" stroke="#d6d5d1"></line><text y="9" x="0" dy=".71em" fill="#554E41" transform="translate(0,10)" style="text-anchor: middle; font-size: 12px;">2010</text></g><g class="tick" transform="translate(180.8158817086528,0)" style="opacity: 1;"><line y2="6" x2="0" stroke="#d6d5d1"></line><text y="9" x="0" dy=".71em" fill="#554E41" transform="translate(0,10)" style="text-anchor: middle; font-size: 12px;">2011</text></g><g class="tick" transform="translate(341.6317634173056,0)" style="opacity: 1;"><line y2="6" x2="0" stroke="#d6d5d1"></line><text y="9" x="0" dy=".71em" fill="#554E41" transform="translate(0,10)" style="text-anchor: middle; font-size: 12px;">2012</text></g><g class="tick" transform="translate(502.8882365826944,0)" style="opacity: 1;"><line y2="6" x2="0" stroke="#d6d5d1"></line><text y="9" x="0" dy=".71em" fill="#554E41" transform="translate(0,10)" style="text-anchor: middle; font-size: 12px;">2013</text></g><g class="tick" transform="translate(663.7041182913472,0)" style="opacity: 1;"><line y2="6" x2="0" stroke="#d6d5d1"></line><text y="9" x="0" dy=".71em" fill="#554E41" transform="translate(0,10)" style="text-anchor: middle; font-size: 12px;">2014</text></g><g class="tick" transform="translate(824.52,0)" style="opacity: 1;"><line y2="6" x2="0" stroke="#d6d5d1"></line><text y="9" x="0" dy=".71em" fill="#554E41" transform="translate(0,10)" style="text-anchor: middle; font-size: 12px;">2015</text></g><path class="domain" d="M20,6V0H824.52V6"></path>
+    <div class="col-1-2" id="lines_chart">
+      {{nvd3-chart
+        type="lineChart"
+        datum=datumLine
+      }}
+
+    {{!-- <svg width="982" height="387.6923076923077" class="svg_lines"><g transform="translate(0,30)"><g class="x axis" transform="translate(0,327.6923076923077)"><g class="tick" transform="translate(20,0)" style="opacity: 1;"><line y2="6" x2="0" stroke="#d6d5d1"></line><text y="9" x="0" dy=".71em" fill="#554E41" transform="translate(0,10)" style="text-anchor: middle; font-size: 12px;">2010</text></g><g class="tick" transform="translate(180.8158817086528,0)" style="opacity: 1;"><line y2="6" x2="0" stroke="#d6d5d1"></line><text y="9" x="0" dy=".71em" fill="#554E41" transform="translate(0,10)" style="text-anchor: middle; font-size: 12px;">2011</text></g><g class="tick" transform="translate(341.6317634173056,0)" style="opacity: 1;"><line y2="6" x2="0" stroke="#d6d5d1"></line><text y="9" x="0" dy=".71em" fill="#554E41" transform="translate(0,10)" style="text-anchor: middle; font-size: 12px;">2012</text></g><g class="tick" transform="translate(502.8882365826944,0)" style="opacity: 1;"><line y2="6" x2="0" stroke="#d6d5d1"></line><text y="9" x="0" dy=".71em" fill="#554E41" transform="translate(0,10)" style="text-anchor: middle; font-size: 12px;">2013</text></g><g class="tick" transform="translate(663.7041182913472,0)" style="opacity: 1;"><line y2="6" x2="0" stroke="#d6d5d1"></line><text y="9" x="0" dy=".71em" fill="#554E41" transform="translate(0,10)" style="text-anchor: middle; font-size: 12px;">2014</text></g><g class="tick" transform="translate(824.52,0)" style="opacity: 1;"><line y2="6" x2="0" stroke="#d6d5d1"></line><text y="9" x="0" dy=".71em" fill="#554E41" transform="translate(0,10)" style="text-anchor: middle; font-size: 12px;">2015</text></g><path class="domain" d="M20,6V0H824.52V6"></path>
     </g><g class="y axis" transform="translate(824.52,0)"><g class="tick" transform="translate(0,327.6923076923077)" style="opacity: 1;"><line x2="-824.52" y2="0" stroke="#d6d5d1"></line><text x="3" y="0" dy=".32em" fill="#554E41" transform="translate(10,0)" style="text-anchor: start; font-size: 12px;">0 €</text></g><g class="tick" transform="translate(0,253.26923076923077)" style="opacity: 1;"><line x2="-824.52" y2="0" stroke="#d6d5d1"></line><text x="3" y="0" dy=".32em" fill="#554E41" transform="translate(10,0)" style="text-anchor: start; font-size: 12px;">585 €</text></g><g class="tick" transform="translate(0,178.84615384615384)" style="opacity: 1;"><line x2="-824.52" y2="0" stroke="#d6d5d1"></line><text x="3" y="0" dy=".32em" fill="#554E41" transform="translate(10,0)" style="text-anchor: start; font-size: 12px;">1.169 €</text></g><g class="tick" transform="translate(0,104.4230769230769)" style="opacity: 1;"><line x2="-824.52" y2="0" stroke="#d6d5d1"></line><text x="3" y="0" dy=".32em" fill="#554E41" transform="translate(10,0)" style="text-anchor: start; font-size: 12px;">1.754 €</text></g><g class="tick" transform="translate(0,30)" style="opacity: 1;"><line x2="-824.52" y2="0" stroke="#d6d5d1"></line><text x="3" y="0" dy=".32em" fill="#554E41" transform="translate(10,0)" style="text-anchor: start; font-size: 12px;">2.338 €</text></g><path class="domain" d="M-824.52,30H0V327.6923076923077H-824.52" stroke="none"></path>
     </g><line class="v_line" x1="824.52" y1="30" x2="824.52" y2="327.6923076923077" style="stroke: rgb(85, 78, 65);"></line><g class="evolution_chart"><g class="lines"><path class="evolution_line mean_province" d="M824.52,150.72709087319868Q695.8672946330778,124.80685102322829,663.7041182913472,121.54102125419493C615.4593537787514,116.64227660064489,551.1990898138006,120.21993205895905,502.8882365826944,118.06879318286508S389.94261664841184,112.96403221030468,341.6317634173056,107.20009541356848S229.06064622124865,83.20568796472992,180.8158817086528,79.64254787129042Q148.65270536692225,77.26712114233075,20,83.44582812397184" style="stroke: rgb(244, 208, 111); stroke-width: 1;"></path><path class="evolution_line mean_autonomy" d="M824.52,162.121652299796Q695.8672946330778,139.23958018029876,663.7041182913472,134.6570540238205C615.4593537787514,127.78326478910313,551.1990898138006,122.16346301901692,502.8882365826944,116.29639073501349S389.94261664841184,99.12796094623941,341.6317634173056,95.54323879713104S229.06064622124865,91.6703739224847,180.8158817086528,92.39824307429097Q148.65270536692225,92.88348917549516,20,100.39569980917287" style="stroke: rgb(248, 180, 25); stroke-width: 1;"></path><path class="evolution_line mean_national" d="M824.52,205.74923669145224Q695.8672946330778,198.19895505691912,663.7041182913472,196.54725932749884C615.4593537787514,194.0697157333684,551.1990898138006,192.55056820425082,502.8882365826944,189.23227939724944S389.94261664841184,179.5379892412976,341.6317634173056,174.4253339474896S229.06064622124865,157.70815374745015,180.8158817086528,155.14791077186288Q148.65270536692225,153.44108212147137,20,157.3570474435744" style="stroke: rgb(218, 152, 10); stroke-width: 1;"></path><path class="evolution_line zaragoza" d="M824.52,196.87958478647104Q695.8672946330778,199.24253339474896,663.7041182913472,200.14554188326642C615.4593537787514,201.5000546160426,551.1990898138006,204.86761926696056,502.8882365826944,205.9096696716457S389.94261664841184,207.97817283016386,341.6317634173056,207.09254458116735S229.06064622124865,202.52809896690135,180.8158817086528,200.0054813450023Q148.65270536692225,198.32373626373627,20,190.27509376850693" style="stroke: rgb(42, 137, 152); stroke-width: 3;"></path>
     </g><g class="dots"><circle class="dot_line mean_province x2015" cx="824.52" cy="150.72709087319868" r="4" style="fill: rgb(244, 208, 111);"></circle><circle class="dot_line mean_province x2014" cx="663.7041182913472" cy="121.54102125419493" r="4" style="fill: rgb(244, 208, 111);"></circle><circle class="dot_line mean_province x2013" cx="502.8882365826944" cy="118.06879318286508" r="4" style="fill: rgb(244, 208, 111);"></circle><circle class="dot_line mean_province x2012" cx="341.6317634173056" cy="107.20009541356848" r="4" style="fill: rgb(244, 208, 111);"></circle><circle class="dot_line mean_province x2011" cx="180.8158817086528" cy="79.64254787129042" r="4" style="fill: rgb(244, 208, 111);"></circle><circle class="dot_line mean_province x2010" cx="20" cy="83.44582812397184" r="4" style="fill: rgb(244, 208, 111);"></circle></g><g class="dots"><circle class="dot_line mean_autonomy x2015" cx="824.52" cy="162.121652299796" r="4" style="fill: rgb(248, 180, 25);"></circle><circle class="dot_line mean_autonomy x2014" cx="663.7041182913472" cy="134.6570540238205" r="4" style="fill: rgb(248, 180, 25);"></circle><circle class="dot_line mean_autonomy x2013" cx="502.8882365826944" cy="116.29639073501349" r="4" style="fill: rgb(248, 180, 25);"></circle><circle class="dot_line mean_autonomy x2012" cx="341.6317634173056" cy="95.54323879713104" r="4" style="fill: rgb(248, 180, 25);"></circle><circle class="dot_line mean_autonomy x2011" cx="180.8158817086528" cy="92.39824307429097" r="4" style="fill: rgb(248, 180, 25);"></circle><circle class="dot_line mean_autonomy x2010" cx="20" cy="100.39569980917287" r="4" style="fill: rgb(248, 180, 25);"></circle></g><g class="dots"><circle class="dot_line mean_national x2015" cx="824.52" cy="205.74923669145224" r="4" style="fill: rgb(218, 152, 10);"></circle><circle class="dot_line mean_national x2014" cx="663.7041182913472" cy="196.54725932749884" r="4" style="fill: rgb(218, 152, 10);"></circle><circle class="dot_line mean_national x2013" cx="502.8882365826944" cy="189.23227939724944" r="4" style="fill: rgb(218, 152, 10);"></circle><circle class="dot_line mean_national x2012" cx="341.6317634173056" cy="174.4253339474896" r="4" style="fill: rgb(218, 152, 10);"></circle><circle class="dot_line mean_national x2011" cx="180.8158817086528" cy="155.14791077186288" r="4" style="fill: rgb(218, 152, 10);"></circle><circle class="dot_line mean_national x2010" cx="20" cy="157.3570474435744" r="4" style="fill: rgb(218, 152, 10);"></circle></g><g class="dots"><circle class="dot_line zaragoza x2015" cx="824.52" cy="196.87958478647104" r="4" style="fill: rgb(42, 137, 152);"></circle><circle class="dot_line zaragoza x2014" cx="663.7041182913472" cy="200.14554188326642" r="4" style="fill: rgb(42, 137, 152);"></circle><circle class="dot_line zaragoza x2013" cx="502.8882365826944" cy="205.9096696716457" r="4" style="fill: rgb(42, 137, 152);"></circle><circle class="dot_line zaragoza x2012" cx="341.6317634173056" cy="207.09254458116735" r="4" style="fill: rgb(42, 137, 152);"></circle><circle class="dot_line zaragoza x2011" cx="180.8158817086528" cy="200.0054813450023" r="4" style="fill: rgb(42, 137, 152);"></circle><circle class="dot_line zaragoza x2010" cx="20" cy="190.27509376850693" r="4" style="fill: rgb(42, 137, 152);"></circle></g></g><text class="chart_title" x="20" y="30" dx="-20" dy="-39" text-anchor="start" style="fill: rgb(85, 78, 65); font-size: 1.2em;">Gasto por habitante</text></g></svg></div>
+    --}}
+    </div>
     <div class="col-2-2">
       <div id="lines_tooltip">
         <table>
@@ -13,9 +21,52 @@
               <th title="name"></th>
               <th title="value" class="right year_header" style="font-size: 14px;">2015</th>
               <th title="dif" class="right per_change">Cambio año anterior</th>
-              </tr></thead><tbody><tr class="zaragoza"><td class="zaragoza"><i class="le le-place" style="background: rgb(42, 137, 152);"></i></td><td class="zaragoza">Zaragoza</td><td class="value right zaragoza">1.027,37 €</td><td class="dif right zaragoza">+2.56%</td></tr><tr class="mean_national"><td class="mean_national"><i class="le le-country" style="background: rgb(218, 152, 10);"></i></td><td class="mean_national">Media Nacional</td><td class="value right mean_national">957,71 €</td><td class="dif right mean_national">-7.02%</td></tr><tr class="mean_autonomy"><td class="mean_autonomy"><i class="le le-com" style="background: rgb(248, 180, 25);"></i></td><td class="mean_autonomy">Media Autonómica</td><td class="value right mean_autonomy">1.300,35 €</td><td class="dif right mean_autonomy">-14.23%</td></tr><tr class="mean_province"><td class="mean_province"><i class="le le-province" style="background: rgb(244, 208, 111);"></i></td><td class="mean_province">Media Provincial</td><td class="value right mean_province">1.389,84 €</td><td class="dif right mean_province">-14.16%</td></tr></tbody></table></div>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="zaragoza">
+              <td class="zaragoza">
+                <i class="le le-place" style="background: rgb(42, 137, 152);"></i>
+              </td>
+              <td class="zaragoza">Zaragoza</td>
+              <td class="value right zaragoza">1.027,37 €</td>
+              <td class="dif right zaragoza">+2.56%</td>
+            </tr>
+            <tr class="mean_national">
+              <td class="mean_national">
+                <i class="le le-country" style="background: rgb(218, 152, 10);"></i>
+              </td>
+              <td class="mean_national">Media Nacional</td>
+              <td class="value right mean_national">957,71 €</td>
+              <td class="dif right mean_national">-7.02%</td>
+            </tr>
+            <tr class="mean_autonomy">
+              <td class="mean_autonomy">
+                <i class="le le-com" style="background: rgb(248, 180, 25);"></i>
+              </td>
+              <td class="mean_autonomy">Media Autonómica</td>
+              <td class="value right mean_autonomy">1.300,35 €</td>
+              <td class="dif right mean_autonomy">-14.23%</td>
+            </tr>
+            <tr class="mean_province">
+              <td class="mean_province">
+                <i class="le le-province" style="background: rgb(244, 208, 111);"></i>
+              </td>
+              <td class="mean_province">Media Provincial</td>
+              <td class="value right mean_province">1.389,84 €</td>
+              <td class="dif right mean_province">-14.16%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div class="help">
-        <a class="tipsit" href="/faq#no_data" original-title="La base de datos que utilizamos no incluye datos para el 100% de los municipios, por lo que las medias están calculadas solo con los datos que existen (que son la gran mayoría). Más información en nuestras preguntas frecuentes">Nota sobre los datos</a>
+        <a
+          class="tipsit"
+          href="/faq#no_data"
+          original-title="La base de datos que utilizamos no incluye datos para el 100% de los municipios, por lo que las medias están calculadas solo con los datos que existen (que son la gran mayoría). Más información en nuestras preguntas frecuentes"
+        >
+          Nota sobre los datos
+        </a>
       </div>
     </div>
   </div>

@@ -4,6 +4,8 @@
     "ember": "~2.7.0-beta.3",
     "ember-cli-shims": "0.1.1",
     "ember-qunit-notifications": "0.1.0",
-    "tabletop": "^1.4.3"
+    "tabletop": "^1.4.3",
+    "d3": "^3.5.17",
+    "nvd3": "~1.8.3"
   }
 }
