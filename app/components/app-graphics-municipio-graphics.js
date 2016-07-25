@@ -13,10 +13,11 @@ export default Ember.Component.extend({
 
   options: {
     chart: {
-      width: 982,
       height: 387,
       color: ['#428bca'],
-      title: 'Gasto por habitante'
+      // title: 'Gasto por habitante',
+      // showYAxis: false,
+      yRange: [0, 1500]
     },
     yAxis: {
       tickFormat: typeof FastBoot === 'undefined' ? d3.format(',s') : null,
