@@ -1,32 +1,64 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  datumLine: [{
-    values: [
-      {x: 2010, y: 1079.24},
-      {x: 2011, y: 1002.82},
-      {x: 2012, y: 947.16},
-      {x: 2013, y: 845.25},
-      {x: 2014, y: 1050.25}
-    ]
-  }],
+  municipio: null,
 
-  options: {
+  chartOptions: {
     chart: {
-      height: 387,
-      color: ['#428bca'],
-      // title: 'Gasto por habitante',
-      // showYAxis: false,
-      yRange: [0, 1500]
+      type: 'line',
+      backgroundColor: null
+    },
+    title: {
+      text: null
+    },
+    subtitle: {
+      // text: 'Source: WorldClimate.com'
+    },
+    xAxis: {
+      categories: [
+        2010, 2011, 2012, 2013, 2014, 2015
+      ],
+      text: null
     },
     yAxis: {
-      tickFormat: typeof FastBoot === 'undefined' ? d3.format(',s') : null,
-      showMaxMin: false
+      title: null
     },
-    tooltip: {
-      gravity: 's',
-      snapDistance: 10
-    },
-  }
+    tooltip: {},
+    legend: {
+      enabled: false
+      // layout: 'vertical',
+      // align: 'right',
+      // verticalAlign: 'middle',
+      // borderWidth: 0
+    }
+  },
 
+  chartData: Ember.computed('munipcio', function() {
+    let municipio = this.get('municipio');
+
+    return [
+      {
+        name: 'Presupuestado',
+        data: [
+          parseInt(municipio['presupuestoMA2010']),
+          parseInt(municipio['presupuestoMA2011']),
+          parseInt(municipio['presupuestoMA2012']),
+          parseInt(municipio['presupuestoMA2013']),
+          parseInt(municipio['presupuestoMA2014']),
+          parseInt(municipio['presupuestoMA2015'])
+        ]
+      },
+      {
+        name: 'Ejecutado',
+        data: [
+          parseInt(municipio['presupuestoME2010']),
+          parseInt(municipio['presupuestoME2011']),
+          parseInt(municipio['presupuestoME2012']),
+          parseInt(municipio['presupuestoME2013']),
+          parseInt(municipio['presupuestoME2014']),
+          parseInt(municipio['presupuestoME2015'])
+        ]
+      }
+    ];
+  })
 });
