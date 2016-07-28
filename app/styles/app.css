@@ -1,1 +1,18 @@
-﻿
+﻿label {
+    color: #fff;
+    float: left;
+    padding-top: 1px;
+    margin-left: 10px;
+    text-align: right;
+    font-size: 19px;
+}
+
+@media (min-width: 768px) {
+    .form-inline .input-group .input-group-btn {
+        width: 1%;
+    }
+}
+
+.form-control {
+    margin-left: 10px;
+}
