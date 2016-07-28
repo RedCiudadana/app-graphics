@@ -9,6 +9,10 @@ module.exports = function(defaults) {
     },
     'ember-power-select': {
       theme: 'bootstrap'
+    },
+    emberHighCharts: {
+      includeHighCharts: true,
+      includeModules: ['treemap']
     }
   });
 
