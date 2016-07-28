@@ -11,9 +11,6 @@ export default Ember.Component.extend({
     title: {
       text: null
     },
-    subtitle: {
-      // text: 'Source: WorldClimate.com'
-    },
     xAxis: {
       categories: [
         2010, 2011, 2012, 2013, 2014, 2015
@@ -26,10 +23,6 @@ export default Ember.Component.extend({
     tooltip: {},
     legend: {
       enabled: false
-      // layout: 'vertical',
-      // align: 'right',
-      // verticalAlign: 'middle',
-      // borderWidth: 0
     }
   },
 
