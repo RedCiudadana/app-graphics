@@ -23,5 +23,8 @@ module.exports = function(defaults) {
   app.import('bower_components/tabletop/src/tabletop.js');
   app.import('vendor/shims.js');
 
+  app.import('bower_components/animate.css/animate.css');
+  app.import('vendor/modern-business.css');
+
   return app.toTree();
 };

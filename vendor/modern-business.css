@@ -29,7 +29,7 @@ header.carousel {
 	height:auto;
 	text-align:center;
 }
-.map { width:100%; height:521px; background-image: url(../img/map.png);
+.map { width:100%; height:521px; background-image: url(../assets/img/map.png);
     background-repeat: no-repeat;
     background-size: 100% auto; }
 	.icon1 {     position: absolute;
@@ -217,7 +217,7 @@ header.carousel {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 	}
-	.after { width:100%; padding-top: 15px; overflow:hidden; background-image:url(../img/half.png); background-repeat:no-repeat; background-size:100% auto; height:166px; }
+	.after { width:100%; padding-top: 15px; overflow:hidden; background-image:url(../assets/img/half.png); background-repeat:no-repeat; background-size:100% auto; height:166px; }
 	.grey { background:#bdbec2; float:left; height:200px; width:100%; margin-bottom:2%; }
 	.ty { width:100%; height:auto; padding-top:12%; }
 	.text { text-align:justify; color:#0b3448; font-size:19px; font-weight:bold;  width:100%; border-bottom:1px solid #c4caca; }
@@ -349,7 +349,7 @@ footer {
 .map {
     width: 100%;
     height: 521px;
-    background-image: url(../img/map.png);
+    background-image: url(../assets/img/map.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -357,7 +357,7 @@ footer {
     width: 100%;
     padding-top: 15px;
     overflow: hidden;
-    background-image: url(../img/half.png);
+    background-image: url(../assets/img/half.png);
     background-repeat: repeat;
     background-size: 100% auto;
     height: 166px;
@@ -410,7 +410,7 @@ footer {
 .map {
     width: 100%;
     height: 276px;
-    background-image: url(../img/map.png);
+    background-image: url(../assets/img/map.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
@@ -468,7 +468,7 @@ footer {
     width: 100%;
     padding-top: 15px;
     overflow: hidden;
-    background-image: url(../img/half.png);
+    background-image: url(../assets/img/half.png);
     background-repeat: repeat;
     background-size: 100% auto;
     height: 170px;
@@ -555,7 +555,7 @@ footer {
     width: 100%;
     padding-top: 15px;
     overflow: hidden;
-    background-image: url(../img/half.png);
+    background-image: url(../assets/img/half.png);
     background-repeat: no-repeat;
      background-size: cover; 
     height: 225px;
@@ -575,7 +575,7 @@ footer {
 .map {
     width: 100%;
     height: 185px;
-    background-image: url(../img/map.png);
+    background-image: url(../assets/img/map.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
