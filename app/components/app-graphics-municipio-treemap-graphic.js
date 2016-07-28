@@ -10,27 +10,23 @@ export default Ember.Component.extend({
     }
   },
 
-  // chartData: [{
-  //   data: [
-  //     {name: 'Apples', value: 3},
-  //     {name: 'Bananas', value: 5},
-  //     {name: 'Sup', value: 7},
-  //     {name: 'Yo', value: 12}
-  //   ]
-  // }]
-
   chartData: Ember.computed('munipcio', function() {
     let municipio = this.get('municipio');
 
     // Info de los rubros
     return [{
       data: [
-        parseInt(municipio['presupuestoMA2010']),
-        parseInt(municipio['presupuestoMA2011']),
-        parseInt(municipio['presupuestoMA2012']),
-        parseInt(municipio['presupuestoMA2013']),
-        parseInt(municipio['presupuestoMA2014']),
-        parseInt(municipio['presupuestoMA2015'])
+        {name: 'Servicios públicos generales', value: parseInt(municipio['MArubro1'])},
+        {name: 'Orden púlico y seguridad ciudadana', value: parseInt(municipio['MArubro2'])},
+        {name: 'Atención a desastres y gestión de riesgos', value: parseInt(municipio['MArubro3'])},
+        {name: 'Asuntos económicos', value: parseInt(municipio['MArubro4'])},
+        {name: 'Protección ambiental', value: parseInt(municipio['MArubro5'])},
+        {name: 'Urbanización y servicios comunitarios', value: parseInt(municipio['MArubro6'])},
+        {name: 'Salud', value: parseInt(municipio['MArubro7'])},
+        {name: 'Actividades deportivas y recreativas', value: parseInt(municipio['MArubro8'])},
+        {name: 'Educación', value: parseInt(municipio['MArubro9'])},
+        {name: 'Protección social', value: parseInt(municipio['MArubro10'])},
+        {name: 'Transacciones de la deuda pública', value: parseInt(municipio['MArubro11'])}
       ]
     }];
   })
