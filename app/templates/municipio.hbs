@@ -1,43 +1,107 @@
-<header class="place">
-  {{!-- TODO: Pendiente de implementar --}}
-  {{!-- {{app-graphics-municipio-links}} --}}
-
-  {{log 'Current model: ' model}}
-
-  <div class="breadcrumb geo">
-    {{model.departamento}} » {{model.nombreMunicipio}}
-  </div>
-
-  <h1 title="Presupuestos municipales de Zaragoza">
-    {{!-- <div class="switcher year_switcher">
-      <a class="current" href="">
-        2015
-        <i class="fa fa-angle-down"></i>
-      </a>
-      <ul>
-          <li><a href="/places/zaragoza/2015">2015</a></li>
-          <li><a href="/places/zaragoza/2014">2014</a></li>
-          <li><a href="/places/zaragoza/2013">2013</a></li>
-          <li><a href="/places/zaragoza/2012">2012</a></li>
-          <li><a href="/places/zaragoza/2011">2011</a></li>
-          <li><a href="/places/zaragoza/2010">2010</a></li>
-      </ul>
-    </div> --}}
-    2016 {{model.nombreMunicipio}}
-  </h1>
-
-  {{!-- TODO: Pendiente de implementar --}}
-  {{!-- {{app-graphics-municipio-sharing-links}} --}}
-</header>
-
-{{app-graphics-municipio-main-metrics municipio=model}}
-
-{{app-graphics-municipio-graphics municipio=model}}
-
-<div class="section_separator" name="separator">
-  <div class="sep"></div>
-  Explora ingresos y gastos de Zaragoza
-  <div class="sep"></div>
+<div class="garrow">
+  <img src="/assets/img/garrow.png" />
 </div>
 
-{{app-graphics-municipio-treemap-table}}
+<div class="dtext wow fadeInUp animated">
+  <h3>Presupuestos municipales</h3>
+</div>
+
+<div class="three2 wow fadeInUp animated">
+  <div class="three3">
+    <div class="col-lg-4 col-md-4 col-xs-4">
+      <div class="dp">
+        <h4>{{model.nombreMunicipio}}</h4>
+        <img src="{{model.alcaldeUrl}}" />
+      </div>
+    </div>
+    <div class="col-lg-5 col-md-5 col-xs-5">
+      <div class="ty">
+        <p class="text">
+          Departamento del municipio:
+          <span class="blue-text">{{model.departamento}}</span>
+        </p>
+        <p class="text">
+          Población total 2015:
+          <span class="blue-text">{{format-number model.poblacion}}</span>
+        </p>
+        <p class="text">
+          No. de aldeas y caseríos:
+          <span class="blue-text">{{format-number model.aldeasCaserios}}</span>
+        </p>
+        <p class="text">
+          Nombre del alcalde:
+          <span class="blue-text">{{model.nombreAlcalde}}</span>
+        </p>
+        <p class="text">
+          Partido político postulante:
+          <span class="blue-text">{{model.partidoPostulante}}</span>
+        </p>
+        <p class="text">
+          Partido político actual:
+          <span class="blue-text">{{model.partidoActual}}</span>
+        </p>
+        <p class="text">
+          Telefono institucional:
+          <span class="blue-text">{{model.telefonoInstitucion}}</span>
+        </p>
+        <p class="text">
+          Direccción institucional:
+          <span class="blue-text">{{model.direccionInstitucion}}</span>
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-xs-3">
+      <div class="dp">
+        <img src="{{model.fotoInstitucion}}" style="padding-top: 20%;"/>
+        <p style="margin-top: 10px; margin-bottom: 2px;">
+          <a href="{{model.fbInstitucion}}">
+            <img src="/assets/img/fb.png" />
+            <span class="social-network">{{model.nombreMunicipio}}</span>
+          </a>
+        </p>
+        <p>
+          <a href="{{model.twInstitucion}}">
+            <img src="/assets/img/tw.png" />
+            <span class="social-network">{{model.nombreMunicipio}}</span>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="full">
+  <div class="box">
+    <div class="col-lg-3 col-md-3 col-xs-3">
+      <div class="l1">
+        <img src="/assets/img/one.jpg" />
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-xs-3">
+      <div class="l1">
+        <img src="/assets/img/two.jpg" />
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-xs-3">
+      <div class="l1">
+        <img src="/assets/img/three.jpg" />
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-xs-3">
+      <div class="l1">
+        <img src="/assets/img/four.jpg" />
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="grey wow  slideInUp animated">
+       &nbsp;
+     </div>
+     <div class="grey wow  slideInUp animated">
+       &nbsp;
+     </div>
+     <div class="grey wow  slideInUp animated">
+       &nbsp;
+     </div>
+    </div>
+  </div>
+</div>
