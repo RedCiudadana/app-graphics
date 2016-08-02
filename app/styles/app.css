@@ -29,3 +29,9 @@
 .grey {
     height: auto;
 }
+
+.widget-lines-graphic-container,
+.widget-treemap-graphic-container,
+.metrics-container {
+    margin: 24px 0px;
+}

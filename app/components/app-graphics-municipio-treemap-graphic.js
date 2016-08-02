@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import formatMoney from 'accounting/format-money';
 
 export default Ember.Component.extend({
   chartOptions: {
@@ -7,6 +8,11 @@ export default Ember.Component.extend({
     },
     title: {
       text: null
+    },
+    tooltip: {
+      formatter: function() {
+        return '<b>' + this.point.name + '</b>: ' + formatMoney(this.point.value, 'Q');
+      }
     }
   },
 

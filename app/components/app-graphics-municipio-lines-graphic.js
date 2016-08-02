@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import formatMoney from 'accounting/format-money';
 
 export default Ember.Component.extend({
   municipio: null,
@@ -9,7 +10,7 @@ export default Ember.Component.extend({
       backgroundColor: null
     },
     title: {
-      text: null
+      text: 'Presupuesto asignado vs ejecutado'
     },
     xAxis: {
       categories: [
@@ -18,9 +19,19 @@ export default Ember.Component.extend({
       text: null
     },
     yAxis: {
-      title: null
+      title: null,
+      labels: {
+        formatter: function() {
+          return formatMoney(this.value, 'Q');
+        }
+      }
     },
-    tooltip: {},
+    tooltip: {
+      pointFormatter: function() {
+        return this.series.name + ': ' + formatMoney(this.y, 'Q') + '<br />';
+      },
+      shared: true
+    },
     legend: {
       enabled: false
     }
