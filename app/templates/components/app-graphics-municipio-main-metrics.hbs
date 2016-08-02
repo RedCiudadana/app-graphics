@@ -1,20 +1,20 @@
 <div class="col-lg-3 col-md-3 col-xs-3">
-  <div class="l1">
-    <img src="/assets/img/one.jpg" />
+  <div class="metric-container presupuesto-actual">
+    Presupuesto actual: <p>{{format-money municipalidad.presupuestoActualMA symbol='Q'}}</p>
   </div>
 </div>
 <div class="col-lg-3 col-md-3 col-xs-3">
-  <div class="l1">
-    <img src="/assets/img/two.jpg" />
+  <div class="metric-container habitantes">
+    Habitantes: <p>{{format-number municipalidad.habitantes}}</p>
   </div>
 </div>
 <div class="col-lg-3 col-md-3 col-xs-3">
-  <div class="l1">
-    <img src="/assets/img/three.jpg" />
+  <div class="metric-container ingreso-total">
+    Ingreso total: <p>{{format-money municipalidad.IngresosPropios symbol='Q'}}</p>
   </div>
 </div>
 <div class="col-lg-3 col-md-3 col-xs-3">
-  <div class="l1">
-    <img src="/assets/img/four.jpg" />
+  <div class="metric-container gasto-total">
+    Gasto total: <p>{{format-money municipalidad.gastoTotal symbol='Q'}}</p>
   </div>
 </div>

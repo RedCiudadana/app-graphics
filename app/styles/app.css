@@ -44,3 +44,30 @@
 .amount {
     text-align: right !important;
 }
+
+.metrics-container {
+    color: #ffffff;
+}
+
+.metrics-container .presupuesto-actual {
+    background: #047d99;
+}
+
+.metrics-container .habitantes {
+    background: #0b2f47;
+}
+
+.metrics-container .ingreso-total {
+    background: #1b95e0;
+}
+
+.metrics-container .gasto-total {
+    background: #a7d270;
+}
+
+.metric-container {
+    min-height: 86px;
+    text-align: center;
+    padding-top: 14px;
+    font-size: 20px;
+}
