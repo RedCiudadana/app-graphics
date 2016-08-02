@@ -29,6 +29,15 @@ export default Ember.Component.extend({
       formatter: function() {
         return '<b>' + this.point.name + '</b>: ' + formatMoney(this.point.value, 'Q');
       }
+    },
+    plotOptions: {
+      treemap: {
+        dataLabels: {
+          style: {
+            textShadow: null
+          }
+        }
+      }
     }
   },
 

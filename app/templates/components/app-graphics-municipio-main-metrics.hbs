@@ -1,73 +1,20 @@
-<div class="main_metrics clearfix">
-
-  {{!-- Gasto por habitante --}}
-  <div class="metric selected">
-    <div class="label">Gasto por habitante</div>
-    <div class="main sign-up">
-      {{format-money municipio.gastoHabitante symbol="Q"}}
-    </div>
-    {{!-- TODO: Pendiente definir qué es esto --}}
-    {{!-- <div class="secondary">
-      <div class="percentage_change up sign-up">2,56%</div>
-      <div class="ranking">
-        <a href="/ranking/2015/G/economic/amount_per_inhabitant?ine_code=50297&amp;page=113" class="ranking_link">
-          <strong>#2804</strong>/8119
-        </a>
-      </div>
-    </div> --}}
+<div class="col-lg-3 col-md-3 col-xs-3">
+  <div class="l1">
+    <img src="/assets/img/one.jpg" />
   </div>
-
-  {{!-- Gasto total --}}
-  <div class="metric">
-    <div class="label">Gasto total</div>
-    <div class="main sign-up">
-      {{format-money municipio.gastoTotal symbol="Q"}}
-    </div>
-    {{!-- TODO: Pendiente definir qué es esto --}}
-    {{!-- <div class="secondary">
-      <div class="percentage_change up sign-up">2,39%</div>
-      <div class="ranking">
-        <a href="/ranking/2015/G/economic/amount?ine_code=50297&amp;page=1" class="ranking_link">
-          <strong>#5</strong>/8119
-        </a>
-      </div>
-    </div> --}}
+</div>
+<div class="col-lg-3 col-md-3 col-xs-3">
+  <div class="l1">
+    <img src="/assets/img/two.jpg" />
   </div>
-
-  {{!-- Habitantes --}}
-  <div class="metric">
-    <div class="label">Habitantes</div>
-    <div class="main sign-down">
-      {{format-number municipio.poblacion}}
-    </div>
-    {{!-- TODO: Pendiente definir qué es esto --}}
-    {{!-- <div class="secondary">
-      <div class="percentage_change up sign-down">-0,17%</div>
-      <div class="ranking"><a href="/ranking/2015/population?ine_code=50297&amp;page=1" class="ranking_link"><strong>#5</strong>/8119</a></div>
-    </div> --}}
+</div>
+<div class="col-lg-3 col-md-3 col-xs-3">
+  <div class="l1">
+    <img src="/assets/img/three.jpg" />
   </div>
-
-  {{!-- Ejecucion vs Presupuestado --}}
-  <div class="metric">
-    <div class="label">Ejecución vs Presupuestado</div>
-    {{!-- TODO: Evaluar convertir en CP --}}
-    <div class="main sign-up">
-      {{porcentajeEjecucion}} % ({{format-number municipio.gastoTotal}})
-    </div>
-  </div>
-
-  {{!-- Deuda vive --}}
-  {{!-- TODO: Pendiente definir qué es esto --}}
-  <div
-    class="metric"
-    data-widget-template="#widget-template-debt"
-    data-widget-type="debt"
-    data-widget-data-url="/api/data/widget/debt/50297/2015.json"
-  >
-    <div class="label">Deuda viva</div>
-    <div class="main ">Huh?</div>
-    <div class="secondary">
-      <div class="percentage_change up ">-23,58%</div>
-    </div>
+</div>
+<div class="col-lg-3 col-md-3 col-xs-3">
+  <div class="l1">
+    <img src="/assets/img/four.jpg" />
   </div>
 </div>
