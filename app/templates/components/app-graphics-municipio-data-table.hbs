@@ -1,1 +1,9 @@
-{{yield}}
+{{#light-table table as |t|}}
+  {{t.head
+    onColumnClick=(action 'onColumnClick')
+    iconAscending='fa fa-sort-asc'
+    iconDescending='fa fa-sort-desc'
+    sortOnClick=true
+  }}
+  {{t.body canSelect=false}}
+{{/light-table}}
