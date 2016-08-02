@@ -10,7 +10,10 @@ export default Ember.Component.extend({
       backgroundColor: null
     },
     title: {
-      text: 'Presupuesto asignado vs ejecutado'
+      text: 'Presupuesto asignado vs ejecutado',
+      style: {
+        color: '#0b2f47'
+      }
     },
     xAxis: {
       categories: [
@@ -43,6 +46,7 @@ export default Ember.Component.extend({
     return [
       {
         name: 'Presupuestado',
+        color: '#fc8e0b',
         data: [
           parseInt(municipio['presupuestoMA2010']),
           parseInt(municipio['presupuestoMA2011']),
@@ -54,6 +58,7 @@ export default Ember.Component.extend({
       },
       {
         name: 'Ejecutado',
+        color: '#a7d270',
         data: [
           parseInt(municipio['presupuestoME2010']),
           parseInt(municipio['presupuestoME2011']),
