@@ -1,4 +1,7 @@
-{{#light-table table as |t|}}
+{{#light-table table
+  tableClassNames='table table-condensed'
+  as |t|
+}}
   {{t.head
     onColumnClick=(action 'onColumnClick')
     iconAscending='fa fa-sort-asc'

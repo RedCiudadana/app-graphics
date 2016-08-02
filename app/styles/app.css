@@ -35,3 +35,12 @@
 .metrics-container {
     margin: 24px 0px;
 }
+
+.lt-head > .table {
+    margin-bottom: 0px;
+}
+
+.ember-light-table .lt-cell .amount,
+.amount {
+    text-align: right !important;
+}

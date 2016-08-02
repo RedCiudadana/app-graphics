@@ -13,8 +13,8 @@ export default Ember.Component.extend({
   columns: computed(function() {
     return [
       {label: 'Rubro', valuePath: 'name'},
-      {label: 'Monto', valuePath: 'value'},
-      {label: '% del total', valuePath: 'porcentaje'}
+      {label: 'Monto', valuePath: 'value', cellClassNames: 'amount', classNames: 'align-center'},
+      {label: '% del total', valuePath: 'porcentaje', cellClassNames: 'amount', classNames: 'align-center'}
     ];
   }),
 
@@ -40,14 +40,6 @@ export default Ember.Component.extend({
       + parseInt(municipalidad['MArubro9'])
       + parseInt(municipalidad['MArubro10'])
       + parseInt(municipalidad['MArubro11']);
-
-    console.log('---');
-    console.log(totalPresupuestado);
-    console.log(parseInt(municipalidad['MArubro1']));
-    console.log(parseInt(municipalidad['MArubro1']) / totalPresupuestado);
-    console.log(formatNumber(parseInt(municipalidad['MArubro1']) / totalPresupuestado));
-    formatNumber(parseInt(municipalidad['MArubro1']) / totalPresupuestado) + '%'
-    console.log('---');
 
     let data = Ember.A([
       {
