@@ -1,1 +1,15 @@
-sup yo
+{{#light-table table
+  tableClassNames='table table-condensed'
+  as |t|
+}}
+  {{t.head
+    iconAscending='fa fa-sort-asc'
+    iconDescending='fa fa-sort-desc'
+    sortOnClick=true
+    onColumnClick=(action 'onColumnClick')
+  }}
+  {{t.body
+    canSelect=false
+  }}
+{{/light-table}}
+

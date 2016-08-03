@@ -20,7 +20,7 @@ export default Ember.Component.extend({
 
   rows: null,
 
-  sortedRows: Ember.computed.sort('rows', '_sortingDefinition'),
+  sortedRows: computed.sort('rows', '_sortingDefinition'),
 
   _sortingDefinition: ['name'],
 
