@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
 
   sortedRecords: computed.sort('model', '_sortingDefinition'),
 
-  _sortingDefinition: ['municipalidad'],
+  _sortingDefinition: ['presupuesto:desc'],
 
   tableRecords: computed.map('sortedRecords', function(municipalidad, index) {
     Ember.setProperties(
@@ -18,7 +18,7 @@ export default Ember.Controller.extend({
       {
         index: index + 1,
         poblacionString: formatNumber(municipalidad.poblacion),
-        presupuestoString: formatMoney(municipalidad.presupuestoActualMA, 'Q')
+        presupuestoActualMAString: formatMoney(municipalidad.presupuestoActualMA, 'Q')
       }
     );
 
@@ -31,8 +31,20 @@ export default Ember.Controller.extend({
       {label: 'Municipalidad', valuePath: 'nombreMunicipio'},
       {label: 'Departamento', valuePath: 'departamento'},
       {label: 'Alcalde', valuePath: 'nombreAlcalde'},
-      {label: 'Habitantes', valuePath: 'poblacionString', sortingProperty: 'poblacion'},
-      {label: 'Presupuesto', valuePath: 'presupuestoString', sortingProperty: 'presupuesto'}
+      {
+        label: 'Habitantes',
+        valuePath: 'poblacionString',
+        sortingProperty: 'poblacion',
+        cellClassNames: 'amount',
+        classNames: 'align-center'
+      },
+      {
+        label: 'Presupuesto',
+        valuePath: 'presupuestoActualMAString',
+        sortingProperty: 'presupuesto',
+        cellClassNames: 'amount',
+        classNames: 'align-center'
+      }
     ];
   }),
 
@@ -64,11 +76,7 @@ export default Ember.Controller.extend({
 
       this.set('_sortingDefinition', [sortingDefinition]);
 
-      console.log(this.get('_sortingDefinition'));
-
-      this.get('table').setRows([]);
-
-      this.get('table').addRows(this.get('tableRecords'));
+      this.setTableData();
     }
   }
 });
