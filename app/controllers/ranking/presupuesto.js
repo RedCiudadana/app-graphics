@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
 
   sortedRecords: computed.sort('model', '_sortingDefinition'),
 
-  _sortingDefinition: ['presupuesto:desc'],
+  _sortingDefinition: ['presupuestoActualMA:desc'],
 
   tableRecords: computed.map('sortedRecords', function(municipalidad, index) {
     Ember.setProperties(
@@ -41,7 +41,7 @@ export default Ember.Controller.extend({
       {
         label: 'Presupuesto',
         valuePath: 'presupuestoActualMAString',
-        sortingProperty: 'presupuesto',
+        sortingProperty: 'presupuestoActualMA',
         cellClassNames: 'amount',
         classNames: 'align-center'
       }
