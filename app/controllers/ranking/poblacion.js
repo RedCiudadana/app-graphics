@@ -4,7 +4,7 @@ import BaseRankingController from './base-ranking';
 const computed = Ember.computed;
 
 export default BaseRankingController.extend({
-  _sortingDefinition: ['presupuestoActualMA:desc'],
+  _sortingDefinition: ['poblacion:desc'],
 
   columnsDefinition: computed(function() {
     return [
@@ -13,9 +13,9 @@ export default BaseRankingController.extend({
       {label: 'Departamento', valuePath: 'departamento'},
       {label: 'Alcalde', valuePath: 'nombreAlcalde'},
       {
-        label: 'Presupuesto',
-        valuePath: 'presupuestoActualMAString',
-        sortingProperty: 'presupuestoActualMA',
+        label: 'Población',
+        valuePath: 'poblacionString',
+        sortingProperty: 'poblacion',
         cellClassNames: 'amount',
         classNames: 'align-center'
       }

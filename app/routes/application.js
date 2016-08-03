@@ -1,4 +1,6 @@
 import Ember from 'ember';
+import formatMoney from 'accounting/format-money';
+import formatNumber from 'accounting/format-number';
 
 export default Ember.Route.extend({
   tabletop: Ember.inject.service('tabletop'),
@@ -18,7 +20,9 @@ export default Ember.Route.extend({
           MArubro8: parseInt(e.MArubro8),
           MArubro9: parseInt(e.MArubro9),
           MArubro10: parseInt(e.MArubro10),
-          MArubro11: parseInt(e.MArubro11)
+          MArubro11: parseInt(e.MArubro11),
+          poblacionString: formatNumber(e.poblacion),
+          presupuestoActualMAString: formatMoney(e.presupuestoActualMA, 'Q')
         });
 
         return e;
