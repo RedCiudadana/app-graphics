@@ -22,7 +22,9 @@ export default Ember.Route.extend({
           MArubro10: parseInt(e.MArubro10),
           MArubro11: parseInt(e.MArubro11),
           poblacionString: formatNumber(e.poblacion),
-          presupuestoActualMAString: formatMoney(e.presupuestoActualMA, 'Q')
+          presupuestoActualMAString: formatMoney(e.presupuestoActualMA, 'Q'),
+          rankingRelacionPartidosPoliticos: parseInt(e.rankingRelacionPartidosPoliticos),
+          rankingCensoDatosAbiertos: parseInt(e.rankingCensoDatosAbiertos)
         });
 
         return e;
