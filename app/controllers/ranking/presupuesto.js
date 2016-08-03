@@ -25,7 +25,7 @@ export default Ember.Controller.extend({
     return municipalidad;
   }),
 
-  columns: computed(function() {
+  columnsDefinition: computed(function() {
     return [
       {label: '#', valuePath: 'index', sortable: false, width: '30px'},
       {label: 'Municipalidad', valuePath: 'nombreMunicipio'},
@@ -51,7 +51,7 @@ export default Ember.Controller.extend({
   init() {
     this._super(...arguments);
 
-    this.set('table', new Table(this.get('columns')));
+    this.set('table', new Table(this.get('columnsDefinition')));
   },
 
   setTableData() {
