@@ -22,7 +22,12 @@ export default Ember.Controller.extend({
   }),
 
   columnsDefinition: computed(function() {
-    return [];
+    return [
+      {label: '#', valuePath: 'index', sortable: false, width: '30px'},
+      {label: 'Municipalidad', valuePath: 'nombreMunicipio'},
+      {label: 'Departamento', valuePath: 'departamento'},
+      {label: 'Alcalde', valuePath: 'nombreAlcalde'}
+    ];
   }),
 
   init() {
