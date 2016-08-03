@@ -9,7 +9,11 @@ export default BaseRankingController.extend({
   columnsDefinition: computed(function() {
     return [
       {label: '#', valuePath: 'index', sortable: false, width: '30px'},
-      {label: 'Municipalidad', valuePath: 'nombreMunicipio'},
+      {
+        label: 'Municipalidad',
+        valuePath: 'nombreMunicipio',
+        cellType: 'municipalidad-link'
+      },
       {label: 'Departamento', valuePath: 'departamento'},
       {label: 'Alcalde', valuePath: 'nombreAlcalde'},
       {
