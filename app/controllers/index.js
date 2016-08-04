@@ -5,12 +5,6 @@ export default Ember.Controller.extend({
   actions: {
     selectMunicipalidad(selectedMunicipalidad) {
       this.set('currentMunicipalidad', selectedMunicipalidad);
-    },
-
-    consultarMunicipalidad() {
-      this.transitionToRoute('municipio', {
-        municipalidad: this.get('currentMunicipalidad').municipio
-      });
     }
   }
 });

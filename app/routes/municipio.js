@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model(params) {
+  setupController(controller, model) {
     const municipalidad = Ember.A(this.modelFor('application'))
-      .findBy('municipio', params.municipalidad);
+      .findBy('municipio', model.municipalidad);
 
-    return municipalidad;
+    controller.set('model', municipalidad);
   }
 });
