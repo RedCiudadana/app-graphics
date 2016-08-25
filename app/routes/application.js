@@ -3,7 +3,9 @@ import formatMoney from 'accounting/format-money';
 import formatNumber from 'accounting/format-number';
 
 export default Ember.Route.extend({
+
   tabletop: Ember.inject.service('tabletop'),
+
   model() {
     return this.get('tabletop').fetch('municipalidad-data').then((data) => {
       return Ember.A(data).map(function (e) {

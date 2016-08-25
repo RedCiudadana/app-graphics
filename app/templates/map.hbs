@@ -1,0 +1,68 @@
+<style>
+  .leaflet-container {
+    width: 1170px;
+    height: 600px;
+  }
+
+  .strong {
+    font-weight: bold;
+  }
+</style>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row" style="margin-top: 80px;">
+    <div class="col-md-12">
+
+      {{!-- TODO: Get this out of here --}}
+      {{#leaflet-map lat=currentLatitude lng=currentLongitude zoom=currentZoom}}
+        {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+        {{#each model.escuelas as |escuela|}}
+          {{#marker-layer
+            lat=escuela.latitude
+            lng=escuela.longitude
+            icon=escuela.icon
+          }}
+            {{!-- <h4 class="modal-title">{{escuela.Institution}}</h4> --}}
+            <div class="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title">{{escuela.Institucion}}</h4>
+                  </div>
+                  <div class="modal-body">
+                    sup yo
+                  </div>
+                </div>
+              </div>
+            </div>
+          {{/marker-layer}}
+        {{/each}}
+      {{/leaflet-map}}
+    </div>
+  </div>
+
+  {{!-- <div class="row" style="margin-top: 20px;">
+    <div class="col-md-12">
+      <table class="table">
+        <tr>
+          <th>Institucion</th>
+        </tr>
+        {{#each model.escuelas as |escuela|}}
+          <tr>
+            <td>
+              {{#escuela-map-spot spotItem=escuela currentItem=currentEscuela}}
+                <span
+                  onclick={{action 'pickEscuela' escuela}}
+                >
+                  {{escuela.Institution}} ({{escuela.latitude}}, {{escuela.longitude}})
+                </span>
+              {{/escuela-map-spot}}
+            </td>
+          </tr>
+        {{/each}}
+      </table>
+    </div>
+  </div> --}}
+</div>
