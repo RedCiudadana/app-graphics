@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('map', { path: '/map' });
   this.route('municipio', { path: '/municipalidad/:municipalidad' });
   this.route('ranking', function() {
     this.route('presupuesto');
