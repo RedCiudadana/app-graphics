@@ -18,7 +18,7 @@ export default Ember.Controller.extend({
   // ),
   municipiosDisponibles: Ember.computed('currentDepartamento', function() {
 
-    if (!this.get('currentDepartanento')) {
+    if (!this.get('currentDepartamento')) {
       return Ember.A([]);
     }
 
@@ -39,10 +39,15 @@ export default Ember.Controller.extend({
 
       this.set('currentLatitude', departamento.latitude);
       this.set('currentLongitude', departamento.longitude);
+
+      this.set('currentMunicipio', null);
     },
 
     selectMunicipio(municipio) {
       this.set('currentMunicipio', municipio);
+
+      this.set('currentLatitude', municipio.latitude);
+      this.set('currentLongitude', municipio.longitude);
     }
   }
 });

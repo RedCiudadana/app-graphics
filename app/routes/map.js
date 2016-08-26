@@ -63,7 +63,5 @@ export default Ember.Route.extend({
     }
 
     controller.set('departamentosDisponibles', model.departamentos);
-
-    controller.set('currentDepartamento', model.departamentos.objectAt(0));
   }
 });
