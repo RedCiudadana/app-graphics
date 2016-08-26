@@ -25,6 +25,28 @@ export default Ember.Route.extend({
 
           return e;
         });
+      }),
+
+      departamentos: this.get('tabletop').fetch('departamentos').then((data) => {
+        return Ember.A(data).map(function(e) {
+          Ember.setProperties(e, {
+            latitude: parseFloat(e.latitude),
+            longitude: parseFloat(e.longitude)
+          });
+
+          return e;
+        });
+      }),
+
+      municipios: this.get('tabletop').fetch('municipios').then((data) => {
+        return Ember.A(data).map(function(e) {
+          Ember.setProperties(e, {
+            latitude: parseFloat(e.latitude),
+            longitude: parseFloat(e.longitude)
+          });
+
+          return e;
+        });
       })
     });
   },
@@ -39,5 +61,9 @@ export default Ember.Route.extend({
       controller.set('currentLatitude', currentEscuela.latitude);
       controller.set('currentLongitude', currentEscuela.longitude);
     }
+
+    controller.set('departamentosDisponibles', model.departamentos);
+
+    controller.set('currentDepartamento', model.departamentos.objectAt(0));
   }
 });

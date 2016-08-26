@@ -7,7 +7,55 @@
   .strong {
     font-weight: bold;
   }
+
+  .ember-power-select-trigger {
+    width: 51%;
+  }
 </style>
+
+<div class="topbar">
+  <h3>Proyectos de inversión pública</h3>
+</div>
+
+<div class="col-lg-4 col-md-4 col-xs-4" style="padding: 0px;">
+  <div class="left">
+    <label style="font-weight: normal; margin-right: 10px;">Departamento</label>
+
+    {{#power-select
+      selected=currentDepartamento
+      options=departamentosDisponibles
+      onchange=(action 'selectDepartamento')
+      searchField='nombre'
+      placeholder='Buscar'
+        as |departamento|
+    }}
+      {{departamento.nombre}}
+    {{/power-select}}
+  </div>
+</div>
+
+<div class="col-lg-5 col-md-5 col-xs-5" style="padding: 0px;">
+  <div class="middle">
+    <label style="font-weight: normal; margin-right: 10px;">Municipio</label>
+
+    {{#power-select
+      selected=currentMunicipio
+      options=municipiosDisponibles
+      onchange=(action 'selectMunicipio')
+      searchField='nombre'
+      placeholder='Buscar'
+        as |municipio|
+    }}
+      {{municipio.nombre}}
+    {{/power-select}}
+  </div>
+</div>
+
+<div class="col-lg-3 col-md-3 col-xs-3" style="padding: 0px;">
+  <div class="right">
+    Año
+  </div>
+</div>
 
 <div class="container">
   <!-- Example row of columns -->
@@ -42,27 +90,4 @@
       {{/leaflet-map}}
     </div>
   </div>
-
-  {{!-- <div class="row" style="margin-top: 20px;">
-    <div class="col-md-12">
-      <table class="table">
-        <tr>
-          <th>Institucion</th>
-        </tr>
-        {{#each model.escuelas as |escuela|}}
-          <tr>
-            <td>
-              {{#escuela-map-spot spotItem=escuela currentItem=currentEscuela}}
-                <span
-                  onclick={{action 'pickEscuela' escuela}}
-                >
-                  {{escuela.Institution}} ({{escuela.latitude}}, {{escuela.longitude}})
-                </span>
-              {{/escuela-map-spot}}
-            </td>
-          </tr>
-        {{/each}}
-      </table>
-    </div>
-  </div> --}}
 </div>
