@@ -77,8 +77,14 @@
         lng=obra.longitude
         icon=obra.icon
       }}
-        {{!-- <h4 class="modal-title">{{obra.Institution}}</h4> --}}
-        <div class="modal">
+        <div class="obra-popup-header">
+        </div>
+        <div class="obra-popup-content">
+          <p><strong>Nombre:</strong> {{obra.Institution}}</p>
+          <p><strong>Dirección:</strong> {{obra.Address}}</p>
+        </div>
+        
+        {{!-- <div class="modal">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -89,7 +95,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
       {{/marker-layer}}
     {{/each}}
   {{/leaflet-map}}
