@@ -415,6 +415,7 @@ header.carousel {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
+
 .after {
     width: 100%;
     padding-top: 15px;
@@ -472,11 +473,13 @@ header.carousel {
     transform: scale(1.1);
     cursor: pointer;
 }
+
 .a {
-    font-size: 10px;
+    font-size: 13px;
     text-align: center;
     color: #fff;
 }
+
 .b {
     padding: 0;
 }
