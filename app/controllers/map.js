@@ -33,14 +33,18 @@ export default Ember.Controller.extend({
     return aniosDisponibles;
   }),
 
-  obrasDisponibles: Ember.computed(function() {
-    var obrasDisponibles = this.get('obras');
+  obrasDesplegables: Ember.computed('currentAnio', function() {
+    var obrasDesplegables = this.get('obras');
 
-    if (this.get('currentAnio')) {
-      obrasDisponibles = obrasDisponibles.filterBy('anio', this.get('currentAnio'));
+    if (!this.get('currentAnio')) {
+      return obrasDesplegables;
     }
 
-    return obrasDisponibles;
+    if (this.get('currentAnio')) {
+      obrasDesplegables = obrasDesplegables.filterBy('anio', this.get('currentAnio'));
+    }
+
+    return obrasDesplegables;
   }),
 
   actions: {

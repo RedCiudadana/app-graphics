@@ -1,6 +1,6 @@
 <style>
   .leaflet-container {
-    width: 1170px;
+    /*width: 1140px;*/
     height: 600px;
   }
 
@@ -17,88 +17,80 @@
   <h3>Proyectos de inversión pública</h3>
 </div>
 
-<div class="col-lg-4 col-md-4 col-xs-4" style="padding: 0px;">
-  <div class="left">
-    <label style="font-weight: normal; margin-right: 10px;">Departamento</label>
+<div class="col-lg-4 col-md-4 col-xs-4 left">
+  <label style="font-weight: normal; margin-right: 10px;">Departamento</label>
 
-    {{#power-select
-      selected=currentDepartamento
-      options=departamentosDisponibles
-      onchange=(action 'selectDepartamento')
-      searchField='nombre'
-      placeholder='Departamentos'
-        as |departamento|
-    }}
-      {{departamento.nombre}}
-    {{/power-select}}
-  </div>
+  {{#power-select
+    selected=currentDepartamento
+    options=departamentosDisponibles
+    onchange=(action 'selectDepartamento')
+    searchField='nombre'
+    placeholder='Departamentos'
+    allowClear=true
+      as |departamento|
+  }}
+    {{departamento.nombre}}
+  {{/power-select}}
 </div>
 
-<div class="col-lg-5 col-md-5 col-xs-5" style="padding: 0px;">
-  <div class="middle">
-    <label style="font-weight: normal; margin-right: 10px;">Municipio</label>
+<div class="col-lg-5 col-md-5 col-xs-5 middle">
+  <label style="font-weight: normal; margin-right: 10px;">Municipio</label>
 
-    {{#power-select
-      selected=currentMunicipio
-      options=municipiosDisponibles
-      onchange=(action 'selectMunicipio')
-      searchField='nombre'
-      placeholder='Municipios'
-      noMatchesMessage=''
-        as |municipio|
-    }}
-      {{municipio.nombre}}
-    {{/power-select}}
-  </div>
+  {{#power-select
+    selected=currentMunicipio
+    options=municipiosDisponibles
+    onchange=(action 'selectMunicipio')
+    searchField='nombre'
+    placeholder='Municipios'
+    allowClear=true
+    noMatchesMessage=''
+      as |municipio|
+  }}
+    {{municipio.nombre}}
+  {{/power-select}}
 </div>
 
-<div class="col-lg-3 col-md-3 col-xs-3" style="padding: 0px;">
-  <div class="right">
-    <label style="font-weight: normal; margin-right: 10px;">Año</label>
-    {{#power-select
-      selected=currentAnio
-      options=aniosDisponibles
-      onchange=(action 'selectAnio')
-      placeholder='Años'
-      noMatchesMessage=''
-        as |anio|
-    }}
-      {{anio}}
-    {{/power-select}}
-  </div>
+<div class="col-lg-3 col-md-3 col-xs-3 right">
+  <label style="font-weight: normal; margin-right: 10px;">Año</label>
+  {{#power-select
+    selected=currentAnio
+    options=aniosDisponibles
+    onchange=(action 'selectAnio')
+    placeholder='Años'
+    allowClear=true
+    noMatchesMessage=''
+      as |anio|
+  }}
+    {{anio}}
+  {{/power-select}}
 </div>
 
-<div class="container">
-  <!-- Example row of columns -->
-  <div class="row" style="margin-top: 80px;">
-    <div class="col-md-12">
+<div class="col-md-12" style="padding: 0px;">
 
-      {{!-- TODO: Get this out of here --}}
-      {{#leaflet-map lat=currentLatitude lng=currentLongitude zoom=currentZoom}}
-        {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+  {{!-- TODO: Get this out of here --}}
+  {{#leaflet-map lat=currentLatitude lng=currentLongitude zoom=currentZoom}}
+    {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
 
-        {{#each obras as |obra|}}
-          {{#marker-layer
-            lat=obra.latitude
-            lng=obra.longitude
-            icon=obra.icon
-          }}
-            {{!-- <h4 class="modal-title">{{obra.Institution}}</h4> --}}
-            <div class="modal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4 class="modal-title">{{obra.Institution}}</h4>
-                  </div>
-                  <div class="modal-body">
-                    sup yo
-                  </div>
-                </div>
+    {{#each obrasDesplegables as |obra|}}
+      {{#marker-layer
+        lat=obra.latitude
+        lng=obra.longitude
+        icon=obra.icon
+      }}
+        {{!-- <h4 class="modal-title">{{obra.Institution}}</h4> --}}
+        <div class="modal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">{{obra.Institution}}</h4>
+              </div>
+              <div class="modal-body">
+                sup yo
               </div>
             </div>
-          {{/marker-layer}}
-        {{/each}}
-      {{/leaflet-map}}
-    </div>
-  </div>
+          </div>
+        </div>
+      {{/marker-layer}}
+    {{/each}}
+  {{/leaflet-map}}
 </div>

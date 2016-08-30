@@ -559,8 +559,8 @@ header.carousel {
     width: 100%;
     height: auto;
 }
+
 .left {
-    width: 100%;
     height: auto;
     padding: 10px 0px 5px;
     text-align: center;
@@ -569,7 +569,6 @@ header.carousel {
 }
 
 .middle {
-    width: 100%;
     height: auto;
     padding: 10px 0px 5px;
     text-align: center;
@@ -578,7 +577,6 @@ header.carousel {
 }
 
 .right {
-    width: 100%;
     height: auto;
     padding: 10px 0px 5px;
     text-align: center;
