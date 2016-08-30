@@ -93,12 +93,6 @@ export default Ember.Route.extend({
   },
 
   _findCategoryByCodigoIcono(categoryIcon) {
-    console.log(categoryIcon);
-
-    let categoryObject = this.get('categoriasIconos').findBy('codigoIcono', categoryIcon);
-
-    console.log(categoryObject);
-
-    return categoryObject;
+    return this.get('categoriasIconos').findBy('codigoIcono', categoryIcon);
   }
 });
