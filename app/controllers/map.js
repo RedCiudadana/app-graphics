@@ -12,6 +12,7 @@ export default Ember.Controller.extend({
 
   obras: Ember.computed.alias('model.obras'),
   categoriasIconos: Ember.computed.alias('model.categoriasIconos'),
+  categoriasIconosActivas: Ember.computed.filterBy('categoriasIconos', 'activo', true),
 
   departamentosDisponibles: Ember.computed.alias('model.departamentos'),
 
@@ -36,6 +37,7 @@ export default Ember.Controller.extend({
     return aniosDisponibles;
   }),
 
+  // Unused
   categoriasDisponibles: Ember.computed('obras', function() {
     let categoriasDisponibles = this.get('obras')
       .uniqBy('category')
@@ -44,18 +46,31 @@ export default Ember.Controller.extend({
     return categoriasDisponibles;
   }),
 
-  obrasDesplegables: Ember.computed('currentAnio', function() {
+  obrasDesplegables: Ember.computed('currentAnio', 'categoriasIconosActivas.[]', function() {
     var obrasDesplegables = this.get('obras');
-
-    if (!this.get('currentAnio')) {
-      return obrasDesplegables;
-    }
 
     if (this.get('currentAnio')) {
       obrasDesplegables = obrasDesplegables.filterBy('anio', this.get('currentAnio'));
     }
 
+    let categoriasIconosActivasStrings = this.get('categoriasIconosActivas')
+      .mapBy('codigoIcono');
+
+    obrasDesplegables = obrasDesplegables.filter(function(obra) {
+      return categoriasIconosActivasStrings.contains(obra.get('category'));
+    });
+
     return obrasDesplegables;
+  }),
+
+  categoryName: Ember.computed('obras.[]', function() {
+    console.log('computing');
+
+    return this.get('obras').map((obra) => {
+      obra.set('categoryObject', this.findCategoryByCodigoIcono(obra.get('category')));
+
+      return obra;
+    });
   }),
 
   actions: {
@@ -82,6 +97,27 @@ export default Ember.Controller.extend({
 
     selectAnio(anio) {
       this.set('currentAnio', anio);
+    },
+
+    toggleActiveCategory(category) {
+
+      if ('todos' === category.get('codigoIcono')) {
+        console.log('about to remove todas las categorias');
+      }
+
+      category.set('activo', !category.get('activo'));
+
+      console.log(this.get('categoriasIconosActivas').length);
     }
+  },
+
+  findCategoryByCodigoIcono(categoryIcon) {
+    console.log(categoryIcon);
+
+    let categoryObject = this.get('categoriasIconos').findBy('codigoIcono', categoryIcon);
+
+    console.log(categoryObject);
+
+    return categoryObject;
   }
 });

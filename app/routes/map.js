@@ -24,7 +24,7 @@ export default Ember.Route.extend({
             })
           });
 
-          return e;
+          return Ember.Object.create(e);
         });
       }),
 
@@ -52,17 +52,22 @@ export default Ember.Route.extend({
 
       categoriasIconos: this.get('tabletop').fetch('categorias-iconos'). then((data) => {
         let categoriasIconos = Ember.A(data).map(function(e) {
-          Ember.setProperties(e, {
+          let emberObject = Ember.Object.create(e);
+
+          Ember.setProperties(emberObject, {
             iconUrl: '/assets/img/category-icons/' + e.codigoIcono + '.jpg',
+            activo: true
           });
 
-          return e;
+          return emberObject;
         });
 
-        categoriasIconos.addObject({
+        categoriasIconos.addObject(Ember.Object.create({
           nombre: 'Todos',
-          iconUrl: '/assets/img/category-icons/todos.jpg'
-        });
+          iconUrl: '/assets/img/category-icons/todos.jpg',
+          activo: true,
+          codigoIcono: 'todos'
+        }));
 
         return categoriasIconos;
       })
@@ -80,6 +85,20 @@ export default Ember.Route.extend({
       controller.set('currentLongitude', currentObra.longitude);
     }
 
+    model.obras.forEach((obra) => {
+      obra.set('categoryObject', model.categoriasIconos.findBy('codigoIcono', obra.category));
+    });
+
     controller.set('departamentosDisponibles', model.departamentos);
+  },
+
+  _findCategoryByCodigoIcono(categoryIcon) {
+    console.log(categoryIcon);
+
+    let categoryObject = this.get('categoriasIconos').findBy('codigoIcono', categoryIcon);
+
+    console.log(categoryObject);
+
+    return categoryObject;
   }
 });

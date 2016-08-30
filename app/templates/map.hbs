@@ -82,6 +82,8 @@
         <div class="obra-popup-content">
           <p><strong>Nombre:</strong> {{obra.Institution}}</p>
           <p><strong>Dirección:</strong> {{obra.Address}}</p>
+          <p><strong>Año:</strong> {{obra.anio}}</p>
+          <p><strong>Categoría:</strong> {{obra.categoryObject.nombre}}</p>
         </div>
         
         {{!-- <div class="modal">
@@ -104,7 +106,7 @@
 <div class="next-map">
   <div class="top">
     {{#each categoriasIconos as |categoria|}}
-      <div class="ele">
+      <div class="ele" {{action "toggleActiveCategory" categoria}}>
         <img src={{categoria.iconUrl}}>
         <div class="down">
           <h5 class="a">{{categoria.nombre}}</h5>
