@@ -26,7 +26,7 @@
       options=departamentosDisponibles
       onchange=(action 'selectDepartamento')
       searchField='nombre'
-      placeholder='Buscar'
+      placeholder='Departamentos'
         as |departamento|
     }}
       {{departamento.nombre}}
@@ -43,7 +43,7 @@
       options=municipiosDisponibles
       onchange=(action 'selectMunicipio')
       searchField='nombre'
-      placeholder='Buscar'
+      placeholder='Municipios'
       noMatchesMessage=''
         as |municipio|
     }}
@@ -54,7 +54,17 @@
 
 <div class="col-lg-3 col-md-3 col-xs-3" style="padding: 0px;">
   <div class="right">
-    Año
+    <label style="font-weight: normal; margin-right: 10px;">Año</label>
+    {{#power-select
+      selected=currentAnio
+      options=aniosDisponibles
+      onchange=(action 'selectAnio')
+      placeholder='Años'
+      noMatchesMessage=''
+        as |anio|
+    }}
+      {{anio}}
+    {{/power-select}}
   </div>
 </div>
 
@@ -67,18 +77,18 @@
       {{#leaflet-map lat=currentLatitude lng=currentLongitude zoom=currentZoom}}
         {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
 
-        {{#each model.escuelas as |escuela|}}
+        {{#each obras as |obra|}}
           {{#marker-layer
-            lat=escuela.latitude
-            lng=escuela.longitude
-            icon=escuela.icon
+            lat=obra.latitude
+            lng=obra.longitude
+            icon=obra.icon
           }}
-            {{!-- <h4 class="modal-title">{{escuela.Institution}}</h4> --}}
+            {{!-- <h4 class="modal-title">{{obra.Institution}}</h4> --}}
             <div class="modal">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h4 class="modal-title">{{escuela.Institucion}}</h4>
+                    <h4 class="modal-title">{{obra.Institution}}</h4>
                   </div>
                   <div class="modal-body">
                     sup yo

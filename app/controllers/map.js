@@ -4,18 +4,15 @@ export default Ember.Controller.extend({
   currentLatitude: 14.569668,
   currentLongitude: -90.497174,
   currentZoom: 12,
-  currentEscuela: null,
+  currentObra: null,
 
   currentDepartamento: null,
   currentMunicipio: null,
   currentAnio: null,
 
+  obras: Ember.computed.alias('model.obras'),
+
   departamentosDisponibles: null,
-  // municipiosDisponibles: Ember.computed.filterBy(
-  //   'model.municpios',
-  //   'departamento',
-  //   'currentDepartamento.codigo'
-  // ),
   municipiosDisponibles: Ember.computed('currentDepartamento', function() {
 
     if (!this.get('currentDepartamento')) {
@@ -26,6 +23,24 @@ export default Ember.Controller.extend({
       'departamento',
       this.get('currentDepartamento').codigo
     );
+  }),
+  aniosDisponibles: Ember.computed('obras', function() {
+    let aniosDisponibles = this.get('obras')
+      .uniqBy('anio')
+      .sortBy('anio')
+      .mapBy('anio');
+
+    return aniosDisponibles;
+  }),
+
+  obrasDisponibles: Ember.computed(function() {
+    var obrasDisponibles = this.get('obras');
+
+    if (this.get('currentAnio')) {
+      obrasDisponibles = obrasDisponibles.filterBy('anio', this.get('currentAnio'));
+    }
+
+    return obrasDisponibles;
   }),
 
   actions: {
@@ -48,6 +63,10 @@ export default Ember.Controller.extend({
 
       this.set('currentLatitude', municipio.latitude);
       this.set('currentLongitude', municipio.longitude);
+    },
+
+    selectAnio(anio) {
+      this.set('currentAnio', anio);
     }
   }
 });

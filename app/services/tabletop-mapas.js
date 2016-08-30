@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import Tabletop from 'tabletop';
 
-// Indice Presupuestos Municipal data
+// Aplicación de visualización de gráficas / Obras de mapa
 var spreadsheet = 'https://docs.google.com/spreadsheets/d/1zFpmcoS_WCNDCPQr34K34htSgoufPb2zP1BDAaoa2lw/pubhtml';
 
 export default Ember.Service.extend({

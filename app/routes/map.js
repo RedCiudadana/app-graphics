@@ -10,11 +10,12 @@ export default Ember.Route.extend({
   model() {
 
     return Ember.RSVP.hash({
-      escuelas: this.get('tabletop').fetch('data').then((data) => {
+      obras: this.get('tabletop').fetch('data').then((data) => {
         return Ember.A(data).map(function (e) {
           Ember.setProperties(e, {
             latitude: parseFloat(e.latitude),
             longitude: parseFloat(e.longitude),
+            anio: parseInt(e.anio),
 
             // TODO: Fix to use icon helper from ember-leaflet
             icon: L.icon({
@@ -54,12 +55,12 @@ export default Ember.Route.extend({
   setupController(controller, model) {
     this._super(controller, model);
 
-    if (!Ember.isEmpty(model.escuelas)) {
-      let currentEscuela = model.escuelas.objectAt(0);
+    if (!Ember.isEmpty(model.obras)) {
+      let currentObra = model.obras.objectAt(0);
 
-      controller.set('currentEscuela', currentEscuela);
-      controller.set('currentLatitude', currentEscuela.latitude);
-      controller.set('currentLongitude', currentEscuela.longitude);
+      controller.set('currentObra', currentObra);
+      controller.set('currentLatitude', currentObra.latitude);
+      controller.set('currentLongitude', currentObra.longitude);
     }
 
     controller.set('departamentosDisponibles', model.departamentos);
