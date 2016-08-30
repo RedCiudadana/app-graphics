@@ -48,6 +48,16 @@ export default Ember.Route.extend({
 
           return e;
         });
+      }),
+
+      categorias: this.get('tabletop').fetch('categorias-iconos'). then((data) => {
+        return Ember.A(data).map(function(e) {
+          Ember.setProperties(e, {
+            iconUrl: '/assets/img/map-icons/' + e.codigoIcono + '.jpg',
+          });
+
+          return e;
+        });
       })
     });
   },

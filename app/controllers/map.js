@@ -11,8 +11,10 @@ export default Ember.Controller.extend({
   currentAnio: null,
 
   obras: Ember.computed.alias('model.obras'),
+  categorias: Ember.computed.alias('model.categorias'),
 
-  departamentosDisponibles: null,
+  departamentosDisponibles: Ember.computed.alias('model.departamentos'),
+
   municipiosDisponibles: Ember.computed('currentDepartamento', function() {
 
     if (!this.get('currentDepartamento')) {
@@ -24,6 +26,7 @@ export default Ember.Controller.extend({
       this.get('currentDepartamento').codigo
     );
   }),
+
   aniosDisponibles: Ember.computed('obras', function() {
     let aniosDisponibles = this.get('obras')
       .uniqBy('anio')
@@ -31,6 +34,14 @@ export default Ember.Controller.extend({
       .mapBy('anio');
 
     return aniosDisponibles;
+  }),
+
+  categoriasDisponibles: Ember.computed('obras', function() {
+    let categoriasDisponibles = this.get('obras')
+      .uniqBy('category')
+      .mapBy('category');
+
+    return categoriasDisponibles;
   }),
 
   obrasDesplegables: Ember.computed('currentAnio', function() {
