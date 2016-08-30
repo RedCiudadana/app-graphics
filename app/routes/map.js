@@ -62,13 +62,6 @@ export default Ember.Route.extend({
           return emberObject;
         });
 
-        categoriasIconos.addObject(Ember.Object.create({
-          nombre: 'Todos',
-          iconUrl: '/assets/img/category-icons/todos.jpg',
-          activo: true,
-          codigoIcono: 'todos'
-        }));
-
         return categoriasIconos;
       })
     });

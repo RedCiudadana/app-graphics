@@ -63,16 +63,6 @@ export default Ember.Controller.extend({
     return obrasDesplegables;
   }),
 
-  categoryName: Ember.computed('obras.[]', function() {
-    console.log('computing');
-
-    return this.get('obras').map((obra) => {
-      obra.set('categoryObject', this.findCategoryByCodigoIcono(obra.get('category')));
-
-      return obra;
-    });
-  }),
-
   actions: {
 
     /**
@@ -100,24 +90,11 @@ export default Ember.Controller.extend({
     },
 
     toggleActiveCategory(category) {
-
-      if ('todos' === category.get('codigoIcono')) {
-        console.log('about to remove todas las categorias');
-      }
-
       category.set('activo', !category.get('activo'));
+    },
 
-      console.log(this.get('categoriasIconosActivas').length);
+    toggleAllCategories() {
+      this.get('categoriasIconos').setEach('activo', true);
     }
-  },
-
-  findCategoryByCodigoIcono(categoryIcon) {
-    console.log(categoryIcon);
-
-    let categoryObject = this.get('categoriasIconos').findBy('codigoIcono', categoryIcon);
-
-    console.log(categoryObject);
-
-    return categoryObject;
   }
 });

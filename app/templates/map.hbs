@@ -11,6 +11,12 @@
   .ember-power-select-trigger {
     width: 51%;
   }
+
+  img.disabled {
+    filter: gray;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+  }
 </style>
 
 <div class="topbar">
@@ -94,11 +100,18 @@
   <div class="top">
     {{#each categoriasIconos as |categoria|}}
       <div class="ele" {{action "toggleActiveCategory" categoria}}>
-        <img src={{categoria.iconUrl}}>
+        <img src={{categoria.iconUrl}} class="{{if categoria.activo "" "disabled"}}">
         <div class="down">
           <h5 class="a">{{categoria.nombre}}</h5>
         </div>
       </div>
     {{/each}}
+
+    <div class="ele" {{action "toggleAllCategories"}}>
+      <img src="/assets/img/category-icons/todos.jpg">
+      <div class="down">
+        <h5 class="a">Todos</h5>
+      </div>
+    </div>
   </div>
 </div>
