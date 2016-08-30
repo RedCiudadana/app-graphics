@@ -50,14 +50,21 @@ export default Ember.Route.extend({
         });
       }),
 
-      categorias: this.get('tabletop').fetch('categorias-iconos'). then((data) => {
-        return Ember.A(data).map(function(e) {
+      categoriasIconos: this.get('tabletop').fetch('categorias-iconos'). then((data) => {
+        let categoriasIconos = Ember.A(data).map(function(e) {
           Ember.setProperties(e, {
-            iconUrl: '/assets/img/map-icons/' + e.codigoIcono + '.jpg',
+            iconUrl: '/assets/img/category-icons/' + e.codigoIcono + '.jpg',
           });
 
           return e;
         });
+
+        categoriasIconos.addObject({
+          nombre: 'Todos',
+          iconUrl: '/assets/img/category-icons/todos.jpg'
+        });
+
+        return categoriasIconos;
       })
     });
   },

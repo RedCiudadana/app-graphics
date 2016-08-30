@@ -103,11 +103,11 @@
 
 <div class="next-map">
   <div class="top">
-    {{#each categoriasDisponibles as |categoria|}}
+    {{#each categoriasIconos as |categoria|}}
       <div class="ele">
-        <img src="/assets/img/1.jpg">
+        <img src={{categoria.iconUrl}}>
         <div class="down">
-          <h5 class="a">SERVICIOS<br> PUBLICOS GENERALES</h5>
+          <h5 class="a">{{categoria.nombre}}</h5>
         </div>
       </div>
     {{/each}}

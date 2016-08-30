@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
   currentAnio: null,
 
   obras: Ember.computed.alias('model.obras'),
-  categorias: Ember.computed.alias('model.categorias'),
+  categoriasIconos: Ember.computed.alias('model.categoriasIconos'),
 
   departamentosDisponibles: Ember.computed.alias('model.departamentos'),
 
