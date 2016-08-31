@@ -6,7 +6,7 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     storeConfigInMeta: false,
     'ember-bootstrap': {
-      importBootstrapTheme: true
+      importBootstrapCSS: false
     },
     'ember-power-select': {
       theme: 'bootstrap'

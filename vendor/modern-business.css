@@ -1,7 +1,9 @@
 /* Global Styles */
-html, body {
+
+/*html, body {
     height: 100%;
-}
+}*/
+
 body {
     /**
      * Required padding for .navbar-fixed-top. Remove if using .navbar-static-top.
@@ -343,13 +345,14 @@ header.carousel {
     width: 100%;
     height: auto;
 }
+
 .dtext {
     width: 100%;
     height: auto;
     overflow: hidden;
     text-align: center;
-    background: #d2d3d5;
 }
+
 .l1 {
     width: 100%;
     height: auto;
@@ -380,12 +383,13 @@ header.carousel {
     box-sizing: border-box;
     width: 9.09%;
 }
+
 .three2 {
     width: 100%;
     height: auto;
     overflow: hidden;
-    background: #d2d3d5;
 }
+
 .three {
     width: 70%;
     margin: 20px auto;
@@ -419,12 +423,13 @@ header.carousel {
 .after {
     width: 100%;
     padding-top: 15px;
+    padding-bottom: 15px;
     overflow: hidden;
     background-image: url(../assets/img/half.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
-    height: 166px;
 }
+
 .grey {
     background: #bdbec2;
     float: left;
@@ -516,12 +521,13 @@ header.carousel {
     border-bottom: 0;
     background: #fff;
 }
+
 .full {
-    background: #fff;
     height: auto;
     width: 100%;
     margin-bottom: 4%;
 }
+
 .box {
     width: 90%;
     padding: 10px;
@@ -633,9 +639,9 @@ header.carousel .fill {
 }
 
 /* Footer Styles */
-footer {
+/*footer {
     margin: 50px 0;
-}
+}*/
 
 /* Responsive Styles */
 @media(max-width:991px) {
