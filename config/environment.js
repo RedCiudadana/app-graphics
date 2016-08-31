@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'app-graphics',
     environment: environment,
     rootURL: '/',
-    locationType: 'none',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -16,6 +16,7 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      rootElement: '#app-graphics'
     }
   };
 
