@@ -1,4 +1,5 @@
 ember build\
+    -prod \
     -o /home/servir/Servir/Oficina/Freelances/RedCiudadana/Dondevanmisimpuestos/soft/dondevanmisimpuestos-red/assets \
 && rm /home/servir/Servir/Oficina/Freelances/RedCiudadana/Dondevanmisimpuestos/soft/dondevanmisimpuestos-red/assets/index.html \
 && rm /home/servir/Servir/Oficina/Freelances/RedCiudadana/Dondevanmisimpuestos/soft/dondevanmisimpuestos-red/assets/crossdomain.xml \
