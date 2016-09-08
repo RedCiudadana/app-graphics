@@ -1,4 +1,5 @@
 <style>
+  /* TODO: Ver si podemos adaptar a viewport */
   .leaflet-container {
     /*width: 1140px;*/
     height: 600px;
@@ -9,13 +10,19 @@
   }
 
   .ember-power-select-trigger {
-    width: 51%;
+    width: 100%;
   }
 
   img.disabled {
     filter: gray;
     filter: grayscale(1);
     -webkit-filter: grayscale(1);
+  }
+
+  @media (min-width: 768px) {
+    .ember-power-select-trigger {
+      width: 51%;
+    }
   }
 </style>
 
@@ -24,7 +31,7 @@
 </div>
 
 <div class="col-lg-4 col-md-4 col-xs-4 left">
-  <label style="font-weight: normal; margin-right: 10px;">Departamento</label>
+  <label class="hidden-xs" style="font-weight: normal; margin-right: 10px;">Departamento</label>
 
   {{#power-select
     selected=currentDepartamento
@@ -40,7 +47,7 @@
 </div>
 
 <div class="col-lg-5 col-md-5 col-xs-5 middle">
-  <label style="font-weight: normal; margin-right: 10px;">Municipio</label>
+  <label class="hidden-xs" style="font-weight: normal; margin-right: 10px;">Municipio</label>
 
   {{#power-select
     selected=currentMunicipio
@@ -57,7 +64,7 @@
 </div>
 
 <div class="col-lg-3 col-md-3 col-xs-3 right">
-  <label style="font-weight: normal; margin-right: 10px;">Año</label>
+  <label class="hidden-xs" style="font-weight: normal; margin-right: 10px;">Año</label>
   {{#power-select
     selected=currentAnio
     options=aniosDisponibles
