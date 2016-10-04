@@ -1,3 +1,5 @@
+# Prod does not generate a testem.js file
+
 ember build\
     -prod \
     -o ./../../../Dondevanmisimpuestos/soft/dondevanmisimpuestos-red/assets \
