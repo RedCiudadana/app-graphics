@@ -1,4 +1,5 @@
-ember build\
+ember build \
+    -prod \
     -o ./../../../Dondevanmisimpuestos/soft/dondevanmisimpuestos-red/assets \
 && rm ./../../../Dondevanmisimpuestos/soft/dondevanmisimpuestos-red/assets/index.html \
 && rm ./../../../Dondevanmisimpuestos/soft/dondevanmisimpuestos-red/assets/crossdomain.xml \
