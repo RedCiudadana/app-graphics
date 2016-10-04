@@ -695,8 +695,6 @@ header.carousel .fill {
         height: auto;
         padding: 10px 0px 5px;
         text-align: center;
-        color: #fff;
-        background: #047d98;
         overflow: hidden;
     }
     .middle {
@@ -705,8 +703,6 @@ header.carousel .fill {
         padding: 10px 0px 5px;
         text-align: center;
         color: #fff;
-        background: #0b2f47;
-        float: right;
         overflow: hidden;
     }
     .right {
@@ -715,8 +711,6 @@ header.carousel .fill {
         padding: 10px 0px 5px;
         text-align: center;
         color: #fff;
-        background: #a8d270;
-        overflow: hidden;
         float: right;
     }
     .map {
