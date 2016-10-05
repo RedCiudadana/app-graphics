@@ -15,6 +15,7 @@ export default Ember.Object.extend({
     'MArubro9',
     'MArubro10',
     'MArubro11',
+    'MArubro12',
     'NRubro1',
     'NRubro2',
     'NRubro3',
@@ -26,6 +27,7 @@ export default Ember.Object.extend({
     'NRubro9',
     'NRubro10',
     'NRubro11',
+    'NRubro12',
     'MErubro1',
     'MErubro2',
     'MErubro3',
@@ -37,6 +39,7 @@ export default Ember.Object.extend({
     'MErubro9',
     'MErubro10',
     'MErubro11',
+    'MErubro12',
     function() {
       let rubros = Ember.A();
 
