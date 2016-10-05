@@ -48,24 +48,24 @@ export default Ember.Component.extend({
         name: 'Presupuestado',
         color: '#fc8e0b',
         data: [
-          parseInt(municipio['presupuestoMA2010']),
-          parseInt(municipio['presupuestoMA2011']),
-          parseInt(municipio['presupuestoMA2012']),
-          parseInt(municipio['presupuestoMA2013']),
-          parseInt(municipio['presupuestoMA2014']),
-          parseInt(municipio['presupuestoMA2015'])
+          municipio.get('presupuestoMA2010'),
+          municipio.get('presupuestoMA2011'),
+          municipio.get('presupuestoMA2012'),
+          municipio.get('presupuestoMA2013'),
+          municipio.get('presupuestoMA2014'),
+          municipio.get('presupuestoMA2015')
         ]
       },
       {
         name: 'Ejecutado',
         color: '#a7d270',
         data: [
-          parseInt(municipio['presupuestoME2010']),
-          parseInt(municipio['presupuestoME2011']),
-          parseInt(municipio['presupuestoME2012']),
-          parseInt(municipio['presupuestoME2013']),
-          parseInt(municipio['presupuestoME2014']),
-          parseInt(municipio['presupuestoME2015'])
+          municipio.get('presupuestoME2010'),
+          municipio.get('presupuestoME2011'),
+          municipio.get('presupuestoME2012'),
+          municipio.get('presupuestoME2013'),
+          municipio.get('presupuestoME2014'),
+          municipio.get('presupuestoME2015')
         ]
       }
     ];

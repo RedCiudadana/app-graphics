@@ -33,7 +33,7 @@
     <label style="margin-right: 10px;">Municipalidad</label>
     {{#power-select
       selected=currentMunicipalidad
-      options=model
+      options=model.municipalidades
       onchange=(action 'selectMunicipalidad')
       searchField='nombreMunicipio'
       placeholder='Buscar'

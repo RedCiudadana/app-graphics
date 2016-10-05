@@ -78,8 +78,12 @@ export default Ember.Route.extend({
       controller.set('currentLongitude', currentObra.longitude);
     }
 
+    // Setup propiedades especiales de las obras
     model.obras.forEach((obra) => {
-      obra.set('categoryObject', model.categoriasIconos.findBy('codigoIcono', obra.category));
+      obra.set(
+        'categoryObject',
+        model.categoriasIconos.findBy('codigoIcono', obra.category)
+      );
     });
 
     controller.set('departamentosDisponibles', model.departamentos);

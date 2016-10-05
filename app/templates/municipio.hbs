@@ -4,12 +4,14 @@
 
 <div class="three2">
   <div class="three3">
+
     <div class="col-lg-4 col-md-4 col-xs-4">
       <div class="dp">
         <h4>{{model.nombreMunicipio}}</h4>
         <img src="{{model.alcaldeUrl}}" />
       </div>
     </div>
+
     <div class="col-lg-5 col-md-5 col-xs-5">
       <div class="ty">
         <p class="text">
@@ -46,6 +48,7 @@
         </p>
       </div>
     </div>
+
     <div class="col-lg-3 col-md-3 col-xs-3">
       <div class="dp">
         <img src="{{model.fotoInstitucion}}" style="padding-top: 20%;"/>
@@ -63,24 +66,36 @@
         </p>
       </div>
     </div>
+
   </div>
 </div>
 
 <div class="full">
   <div class="box">
+
+    {{!-- Métricas generales --}}
     <div class="metrics-container">
       {{app-graphics-municipio-main-metrics municipalidad=model}}
     </div>
+
     <div class="col-lg-12">
+
+      {{!-- Gráfica de presupuestos históricos --}}
       <div class="widget-lines-graphic-container">
         {{app-graphics-municipio-lines-graphic municipio=model}}
       </div>
+
+      {{!-- Treemap de distribución de presupuesto --}}
       <div class="widget-treemap-graphic-container">
         {{app-graphics-municipio-treemap-graphic municipalidad=model}}
       </div>
+
+      {{!-- Tabla de distribución de presupuesto --}}
       <div>
         {{app-graphics-municipio-data-table municipalidad=model}}
       </div>
+
     </div>
+
   </div>
 </div>

@@ -41,68 +41,83 @@ export default Ember.Component.extend({
     }
   },
 
-  chartData: Ember.computed('munipcio', function() {
+  chartData: Ember.computed('municipalidad', function() {
     let municipalidad = this.get('municipalidad');
 
     // Info de los rubros
-    return [{
-      data: [
-        {
-          name: 'Servicios públicos generales',
-          value: parseInt(municipalidad['MArubro1']),
-          color: colors[Math.floor(Math.random() * colors.length)]
-        },
-        {
-          name: 'Orden púlico y seguridad ciudadana',
-          value: parseInt(municipalidad['MArubro2']),
-          color: colors[Math.floor(Math.random() * colors.length)]
-        },
-        {
-          name: 'Atención a desastres y gestión de riesgos',
-          value: parseInt(municipalidad['MArubro3']),
-          color: colors[Math.floor(Math.random() * colors.length)]
-        },
-        {
-          name: 'Asuntos económicos',
-          value: parseInt(municipalidad['MArubro4']),
-          color: colors[Math.floor(Math.random() * colors.length)]
-        },
-        {
-          name: 'Protección ambiental',
-          value: parseInt(municipalidad['MArubro5']),
-          color: colors[Math.floor(Math.random() * colors.length)]
-        },
-        {
-          name: 'Urbanización y servicios comunitarios',
-          value: parseInt(municipalidad['MArubro6']),
-          color: colors[Math.floor(Math.random() * colors.length)]
-        },
-        {
-          name: 'Salud',
-          value: parseInt(municipalidad['MArubro7']),
-          color: colors[Math.floor(Math.random() * colors.length)]
-        },
-        {
-          name: 'Actividades deportivas y recreativas',
-          value: parseInt(municipalidad['MArubro8']),
-          color: colors[Math.floor(Math.random() * colors.length)]
-        },
-        {
-          name: 'Educación',
-          value: parseInt(municipalidad['MArubro9']),
-          color: colors[Math.floor(Math.random() * colors.length)]
-        },
-        {
-          name: 'Protección social',
-          value: parseInt(municipalidad['MArubro10']),
-          color: colors[Math.floor(Math.random() * colors.length)]
-        },
-        {
-          name: 'Transacciones de la deuda pública',
-          value: parseInt(municipalidad['MArubro11']),
-          color: colors[Math.floor(Math.random() * colors.length)]
-        }
-      ]
-    }];
+    let data = municipalidad
+      .get('informacionRubrosPresupuestoActual')
+      .filterBy('montoAsignado')
+      .map(function(e) {
+        return {
+          name: e.nombre,
+          value: e.montoAsignado,
+          color: e.color
+        };
+      });
+
+    // console.log(data);
+
+    return [{data: data}];
+
+    // return [{
+    //   data: [
+    //     {
+    //       name: 'Servicios públicos generales',
+    //       value: municipalidad.get('MArubro1'),
+    //       color: colors[Math.floor(Math.random() * colors.length)]
+    //     },
+    //     {
+    //       name: 'Orden púlico y seguridad ciudadana',
+    //       value: municipalidad.get('MArubro2'),
+    //       color: colors[Math.floor(Math.random() * colors.length)]
+    //     },
+    //     {
+    //       name: 'Atención a desastres y gestión de riesgos',
+    //       value: municipalidad.get('MArubro3'),
+    //       color: colors[Math.floor(Math.random() * colors.length)]
+    //     },
+    //     {
+    //       name: 'Asuntos económicos',
+    //       value: municipalidad.get('MArubro4'),
+    //       color: colors[Math.floor(Math.random() * colors.length)]
+    //     },
+    //     {
+    //       name: 'Protección ambiental',
+    //       value: municipalidad.get('MArubro5'),
+    //       color: colors[Math.floor(Math.random() * colors.length)]
+    //     },
+    //     {
+    //       name: 'Urbanización y servicios comunitarios',
+    //       value: municipalidad.get('MArubro6'),
+    //       color: colors[Math.floor(Math.random() * colors.length)]
+    //     },
+    //     {
+    //       name: 'Salud',
+    //       value: municipalidad.get('MArubro7'),
+    //       color: colors[Math.floor(Math.random() * colors.length)]
+    //     },
+    //     {
+    //       name: 'Actividades deportivas y recreativas',
+    //       value: municipalidad.get('MArubro8'),
+    //       color: colors[Math.floor(Math.random() * colors.length)]
+    //     },
+    //     {
+    //       name: 'Educación',
+    //       value: municipalidad.get('MArubro9'),
+    //       color: colors[Math.floor(Math.random() * colors.length)]
+    //     },
+    //     {
+    //       name: 'Protección social',
+    //       value: municipalidad.get('MArubro10'),
+    //       color: colors[Math.floor(Math.random() * colors.length)]
+    //     },
+    //     {
+    //       name: 'Transacciones de la deuda pública',
+    //       value: municipalidad.get('MArubro11'),
+    //       color: colors[Math.floor(Math.random() * colors.length)]
+    //     }
+    //   ]
+    // }];
   })
 });
