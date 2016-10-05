@@ -85,15 +85,21 @@
         {{app-graphics-municipio-lines-graphic municipio=model}}
       </div>
 
-      {{!-- Treemap de distribución de presupuesto --}}
-      <div class="widget-treemap-graphic-container">
-        {{app-graphics-municipio-treemap-graphic municipalidad=model}}
-      </div>
+      {{#if model.informacionRubrosPresupuestoActual.length}}
+        {{!-- Treemap de distribución de presupuesto --}}
+        <div class="widget-treemap-graphic-container">
+          {{app-graphics-municipio-treemap-graphic municipalidad=model}}
+        </div>
 
-      {{!-- Tabla de distribución de presupuesto --}}
-      <div>
-        {{app-graphics-municipio-data-table municipalidad=model}}
-      </div>
+        {{!-- Tabla de distribución de presupuesto --}}
+        <div>
+          {{app-graphics-municipio-data-table municipalidad=model}}
+        </div>
+      {{else}}
+        <div class="text-center" style="margin: 24px 0px;">
+          <h3>No se cuenta con información del desglose del presupuesto actual</h3>
+        </div>
+      {{/if}}
 
     </div>
 
