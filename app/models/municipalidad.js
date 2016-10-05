@@ -40,8 +40,10 @@ export default Ember.Object.extend({
     function() {
       let rubros = Ember.A();
 
-      for (var i = 1; i <= 11; i += 1) {
-        let index = i + 1;
+      for (var index = 1; index <= 12; index += 1) {
+        if (!this.get('MArubro' + index)) {
+          continue;
+        }
 
         rubros.pushObject({
           nombre: this.get('NRubro' + index),
@@ -52,6 +54,19 @@ export default Ember.Object.extend({
       }
 
       return rubros;
+    }
+  ),
+
+  sumatoriaPresupuestoActualAsignado: Ember.computed(
+    'informacionRubrosPresupuestoActual',
+    function() {
+      return this.get('informacionRubrosPresupuestoActual')
+        .reduce(
+          function(accumulated, current) {
+            return accumulated + current.montoAsignado;
+          },
+          0
+        );
     }
   )
 });

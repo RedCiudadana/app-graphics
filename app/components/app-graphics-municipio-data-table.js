@@ -41,98 +41,26 @@ export default Ember.Component.extend({
 
     let municipalidad = this.get('municipalidad');
 
-    let totalPresupuestado = municipalidad['MArubro1']
-      + municipalidad['MArubro2']
-      + municipalidad['MArubro3']
-      + municipalidad['MArubro4']
-      + municipalidad['MArubro5']
-      + municipalidad['MArubro6']
-      + municipalidad['MArubro7']
-      + municipalidad['MArubro8']
-      + municipalidad['MArubro9']
-      + municipalidad['MArubro10']
-      + municipalidad['MArubro11'];
+    let sumatoriaPresupuestoActualAsignado = municipalidad.get('sumatoriaPresupuestoActualAsignado');
 
-    // TODO: Fix
-    let data = Ember.A([
-      {
-        name: 'Servicios públicos generales',
-        value: municipalidad['MArubro1'],
-        valueString: formatMoney(municipalidad['MArubro1'], 'Q'),
-        porcentaje: municipalidad['MArubro1'] / totalPresupuestado * 100,
-        porcentajeString: formatNumber(municipalidad['MArubro1'] / totalPresupuestado * 100, 2) + '%'
-      },
-      {
-        name: 'Orden púlico y seguridad ciudadana',
-        value: municipalidad['MArubro2'],
-        valueString: formatMoney(municipalidad['MArubro2'], 'Q'),
-        porcentaje: municipalidad['MArubro2'] / totalPresupuestado * 100,
-        porcentajeString: formatNumber(municipalidad['MArubro2'] / totalPresupuestado * 100, 2) + '%'
-      },
-      {
-        name: 'Atención a desastres y gestión de riesgos',
-        value: municipalidad['MArubro3'],
-        valueString: formatMoney(municipalidad['MArubro3'], 'Q'),
-        porcentaje: municipalidad['MArubro3'] / totalPresupuestado * 100,
-        porcentajeString: formatNumber(municipalidad['MArubro3'] / totalPresupuestado * 100, 2) + '%'
-      },
-      {
-        name: 'Asuntos económicos',
-        value: municipalidad['MArubro4'],
-        valueString: formatMoney(municipalidad['MArubro4'], 'Q'),
-        porcentaje: municipalidad['MArubro4'] / totalPresupuestado * 100,
-        porcentajeString: formatNumber(municipalidad['MArubro4'] / totalPresupuestado * 100, 2) + '%'
-      },
-      {
-        name: 'Protección ambiental',
-        value: municipalidad['MArubro5'],
-        valueString: formatMoney(municipalidad['MArubro5'], 'Q'),
-        porcentaje: municipalidad['MArubro5'] / totalPresupuestado * 100,
-        porcentajeString: formatNumber(municipalidad['MArubro5'] / totalPresupuestado * 100, 2) + '%'
-      },
-      {
-        name: 'Urbanización y servicios comunitarios',
-        value: municipalidad['MArubro6'],
-        valueString: formatMoney(municipalidad['MArubro6'], 'Q'),
-        porcentaje: municipalidad['MArubro6'] / totalPresupuestado * 100,
-        porcentajeString: formatNumber(municipalidad['MArubro6'] / totalPresupuestado * 100, 2) + '%'
-      },
-      {
-        name: 'Salud',
-        value: municipalidad['MArubro7'],
-        valueString: formatMoney(municipalidad['MArubro7'], 'Q'),
-        porcentaje: municipalidad['MArubro7'] / totalPresupuestado * 100,
-        porcentajeString: formatNumber(municipalidad['MArubro7'] / totalPresupuestado * 100, 2) + '%'
-      },
-      {
-        name: 'Actividades deportivas y recreativas',
-        value: municipalidad['MArubro8'],
-        valueString: formatMoney(municipalidad['MArubro8'], 'Q'),
-        porcentaje: municipalidad['MArubro8'] / totalPresupuestado * 100,
-        porcentajeString: formatNumber(municipalidad['MArubro8'] / totalPresupuestado * 100, 2) + '%'
-      },
-      {
-        name: 'Educación',
-        value: municipalidad['MArubro9'],
-        valueString: formatMoney(municipalidad['MArubro9'], 'Q'),
-        porcentaje: municipalidad['MArubro9'] / totalPresupuestado * 100,
-        porcentajeString: formatNumber(municipalidad['MArubro9'] / totalPresupuestado * 100, 2) + '%'
-      },
-      {
-        name: 'Protección social',
-        value: municipalidad['MArubro10'],
-        valueString: formatMoney(municipalidad['MArubro10'], 'Q'),
-        porcentaje: municipalidad['MArubro10'] / totalPresupuestado * 100,
-        porcentajeString: formatNumber(municipalidad['MArubro10'] / totalPresupuestado * 100, 2) + '%'
-      },
-      {
-        name: 'Transacciones de la deuda pública',
-        value: municipalidad['MArubro11'],
-        valueString: formatMoney(municipalidad['MArubro11'], 'Q'),
-        porcentaje: municipalidad['MArubro11'] / totalPresupuestado * 100,
-        porcentajeString: formatNumber(municipalidad['MArubro11'] / totalPresupuestado * 100, 2) + '%'
-      }
-    ]);
+    // Info de los rubros
+    let data = municipalidad
+      .get('informacionRubrosPresupuestoActual')
+      .filterBy('montoAsignado')
+      .map(function(e) {
+        return {
+          name: e.nombre,
+          value: e.montoAsignado,
+          valueString: formatMoney(e.montoAsignado, 'Q'),
+          porcentaje: e.montoAsignado / sumatoriaPresupuestoActualAsignado * 100,
+          porcentajeString:
+            formatNumber(
+              e.montoAsignado / sumatoriaPresupuestoActualAsignado * 100,
+              2
+            )
+              + '%'
+        };
+      });
 
     this.set('rows', data);
 

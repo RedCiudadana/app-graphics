@@ -18,8 +18,6 @@ export default Ember.Route.extend({
         );
       });
 
-    console.log(configRenglonesColores);
-
     municipalidad.setProperties(configRenglonesColores);
 
     controller.set('model', municipalidad);
