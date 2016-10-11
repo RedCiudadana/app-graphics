@@ -18,26 +18,28 @@
     font-weight: bold;
   }
 
-  .ember-power-select-trigger {
-    width: 100%;
+  .filter-box-content-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  @media (min-width: 768px) {
+    .filter-box-content-container {
+      width: 92%;
+    }
+  }
+
+  @media (min-width: 991px) {
+    .filter-box-content-container {
+      width: 60%;
+    }
   }
 
   img.disabled {
     filter: gray;
     filter: grayscale(1);
     -webkit-filter: grayscale(1);
-  }
-
-  .ember-power-select-trigger {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  @media (min-width: 768px) {
-    .ember-power-select-trigger {
-      width: 51%;
-    }
   }
 </style>
 
@@ -46,51 +48,55 @@
 </div>
 
 <div class="col-lg-4 col-md-4 col-xs-4 left filter-box">
-  <label class="hidden-xs" style="font-weight: normal; margin-right: 10px;">Departamento</label>
-
-  {{#power-select
-    selected=currentDepartamento
-    options=departamentosDisponibles
-    onchange=(action 'selectDepartamento')
-    searchField='nombre'
-    placeholder='Departamento'
-    allowClear=true
-      as |departamento|
-  }}
-    {{departamento.nombre}}
-  {{/power-select}}
+  <div class="filter-box-content-container">
+    <label class="hidden-xs" style="font-weight: normal; margin-right: 10px;">Departamento</label>
+    {{#power-select
+      selected=currentDepartamento
+      options=departamentosDisponibles
+      onchange=(action 'selectDepartamento')
+      searchField='nombre'
+      placeholder='Departamento'
+      allowClear=true
+        as |departamento|
+    }}
+      {{departamento.nombre}}
+    {{/power-select}}
+  </div>
 </div>
 
 <div class="col-lg-5 col-md-5 col-xs-5 middle filter-box">
-  <label class="hidden-xs" style="font-weight: normal; margin-right: 10px;">Municipio</label>
-
-  {{#power-select
-    selected=currentMunicipio
-    options=municipiosDisponibles
-    onchange=(action 'selectMunicipio')
-    searchField='nombre'
-    placeholder='Municipio'
-    allowClear=true
-    noMatchesMessage=''
-      as |municipio|
-  }}
-    {{municipio.nombre}}
-  {{/power-select}}
+  <div class="filter-box-content-container">
+    <label class="hidden-xs" style="font-weight: normal; margin-right: 10px;">Municipio</label>
+    {{#power-select
+      selected=currentMunicipio
+      options=municipiosDisponibles
+      onchange=(action 'selectMunicipio')
+      searchField='nombre'
+      placeholder='Municipio'
+      allowClear=true
+      noMatchesMessage=''
+        as |municipio|
+    }}
+      {{municipio.nombre}}
+    {{/power-select}}
+  </div>
 </div>
 
 <div class="col-lg-3 col-md-3 col-xs-3 right filter-box">
-  <label class="hidden-xs" style="font-weight: normal; margin-right: 10px;">Año</label>
-  {{#power-select
-    selected=currentAnio
-    options=aniosDisponibles
-    onchange=(action 'selectAnio')
-    placeholder='Año'
-    allowClear=true
-    noMatchesMessage=''
-      as |anio|
-  }}
-    {{anio}}
-  {{/power-select}}
+  <div class="filter-box-content-container">
+    <label class="hidden-xs" style="font-weight: normal; margin-right: 10px;">Año</label>
+    {{#power-select
+      selected=currentAnio
+      options=aniosDisponibles
+      onchange=(action 'selectAnio')
+      placeholder='Año'
+      allowClear=true
+      noMatchesMessage=''
+        as |anio|
+    }}
+      {{anio}}
+    {{/power-select}}
+  </div>
 </div>
 
 {{#leaflet-map lat=currentLatitude lng=currentLongitude zoom=currentZoom}}
