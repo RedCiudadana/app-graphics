@@ -1,8 +1,12 @@
 <style>
-  /* TODO: Ver si podemos adaptar a viewport */
-  .leaflet-container {
-    /*width: 1140px;*/
-    height: 600px;
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  html, body, .leaflet-container {
+    height: 100vh;
+    width: 100vw;
   }
 
   .strong {
@@ -76,4 +80,45 @@
   }}
     {{anio}}
   {{/power-select}}
+</div>
+
+{{#leaflet-map lat=currentLatitude lng=currentLongitude zoom=currentZoom}}
+  {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+  {{#each obrasDesplegables as |obra|}}
+    {{#marker-layer
+      lat=obra.latitude
+      lng=obra.longitude
+      icon=obra.icon
+    }}
+      <div class="obra-popup-header">
+      </div>
+      <div class="obra-popup-content">
+        <p><strong>Nombre:</strong> {{obra.Institution}}</p>
+        <p><strong>Dirección:</strong> {{obra.Address}}</p>
+        <p><strong>Año:</strong> {{obra.anio}}</p>
+        <p><strong>Categoría:</strong> {{obra.categoryObject.nombre}}</p>
+      </div>
+    {{/marker-layer}}
+  {{/each}}
+{{/leaflet-map}}
+
+<div class="next-map">
+  <div class="top">
+    {{#each categoriasIconos as |categoria|}}
+      <div class="ele" {{action "toggleActiveCategory" categoria}}>
+        <img src={{categoria.iconUrl}} class="{{if categoria.activo "" "disabled"}}">
+        <div class="down">
+          <h5 class="a">{{categoria.nombre}}</h5>
+        </div>
+      </div>
+    {{/each}}
+
+    <div class="ele" {{action "toggleAllCategories"}}>
+      <img src="/assets/img/category-icons/todos.jpg">
+      <div class="down">
+        <h5 class="a">Todos</h5>
+      </div>
+    </div>
+  </div>
 </div>
