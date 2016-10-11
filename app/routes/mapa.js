@@ -10,7 +10,7 @@ export default Ember.Route.extend({
   model() {
 
     return Ember.RSVP.hash({
-      obras: this.get('tabletop').fetch('data').then((data) => {
+      obras: this.get('tabletop').fetch('data-obras-municipales').then((data) => {
         return Ember.A(data).map(function (e) {
           Ember.setProperties(e, {
             latitude: parseFloat(e.latitude),
@@ -28,7 +28,7 @@ export default Ember.Route.extend({
         });
       }),
 
-      departamentos: this.get('tabletop').fetch('departamentos').then((data) => {
+      departamentos: this.get('tabletop').fetch('ref-departamentos').then((data) => {
         return Ember.A(data).map(function(e) {
           Ember.setProperties(e, {
             latitude: parseFloat(e.latitude),
@@ -39,7 +39,7 @@ export default Ember.Route.extend({
         });
       }),
 
-      municipios: this.get('tabletop').fetch('municipios').then((data) => {
+      municipios: this.get('tabletop').fetch('ref-municipios').then((data) => {
         return Ember.A(data).map(function(e) {
           Ember.setProperties(e, {
             latitude: parseFloat(e.latitude),
@@ -50,7 +50,7 @@ export default Ember.Route.extend({
         });
       }),
 
-      categoriasIconos: this.get('tabletop').fetch('categorias-iconos'). then((data) => {
+      categoriasIconos: this.get('tabletop').fetch('config-categorias-iconos'). then((data) => {
         let categoriasIconos = Ember.A(data).map(function(e) {
           let emberObject = Ember.Object.create(e);
 

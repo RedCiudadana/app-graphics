@@ -7,7 +7,7 @@ module.exports = function(defaults) {
     storeConfigInMeta: false,
     'ember-bootstrap': {
       // TODO: This shall be changed to false when going prod
-      importBootstrapCSS: false
+      importBootstrapCSS: true
     },
     'ember-power-select': {
       theme: 'bootstrap'
