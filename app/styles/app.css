@@ -88,3 +88,14 @@
 .topbar h3 {
     font-size: 25px;
 }
+
+.filter-box {
+    height: auto;
+    padding: 5px 0px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.filter-box label {
+    margin-bottom: 0px;
+}

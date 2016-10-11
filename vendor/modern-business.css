@@ -11,9 +11,11 @@ body {
      */
     padding-top: 00px;
 }
+
 .img-portfolio {
     margin-bottom: 30px;
 }
+
 .img-hover:hover {
     opacity: 0.8;
 }
@@ -22,11 +24,13 @@ body {
 header.carousel {
     height: 50%;
 }
+
 .icon {
     width: 100%;
     height: auto;
     text-align: center;
 }
+
 .map {
     width: 100%;
     height: 521px;
@@ -34,6 +38,7 @@ header.carousel {
     background-repeat: no-repeat;
     background-size: 100% auto;
 }
+
 .icon1 {
     position: absolute;
     top: 3%;
@@ -570,27 +575,15 @@ header.carousel {
 }
 
 .left {
-    height: auto;
-    padding: 10px 0px 5px;
-    text-align: center;
     background: #047d98;
-    overflow: hidden;
 }
 
 .middle {
-    height: auto;
-    padding: 10px 0px 5px;
-    text-align: center;
     background: #0b2f47;
-    overflow: hidden;
 }
 
 .right {
-    height: auto;
-    padding: 10px 0px 5px;
-    text-align: center;
     background: #a8d270;
-    overflow: hidden;
 }
 
 .topbar {
@@ -689,30 +682,8 @@ header.carousel .fill {
         padding-left: 0px;
     }
 }
+
 @media(max-width:767px) {
-    .left {
-        width: 100%;
-        height: auto;
-        padding: 10px 0px 5px;
-        text-align: center;
-        overflow: hidden;
-    }
-    .middle {
-        width: 100%;
-        height: auto;
-        padding: 10px 0px 5px;
-        text-align: center;
-        color: #fff;
-        overflow: hidden;
-    }
-    .right {
-        width: 100%;
-        height: auto;
-        padding: 10px 0px 5px;
-        text-align: center;
-        color: #fff;
-        float: right;
-    }
     .map {
         width: 100%;
         height: 276px;
@@ -720,6 +691,7 @@ header.carousel .fill {
         background-repeat: no-repeat;
         background-size: 100% auto;
     }
+
     .form-control {
         display: block;
         width: 90%;
@@ -783,6 +755,7 @@ header.carousel .fill {
         width: 9%;
     }
 }
+
 @media(max-width:467px) {
     .col-xs-4, .col-xs-3, .col-xs-5, .col-xs-6 {
         width: 100%;
@@ -895,23 +868,28 @@ header.carousel .fill {
         font-size: 19px;
     }
 }
+
 .popover-example {
     margin: 0 0 10px;
     list-style: none;
 }
+
 .lbox {
     background: #d1d3d4;
     border-radius: 6px;
     min-height: 482px;
 }
+
 .popover-example li {
     display: inline-block;
     margin: 4px;
     padding: 0px;
 }
+
 .btn:focus {
     outline: none;
 }
+
 .modExample .btn {
     margin: 4px 8px 4px 0;
 }
