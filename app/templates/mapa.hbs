@@ -133,7 +133,7 @@
     {{#each categoriasIconos as |categoria|}}
       <div class="ele" {{action "toggleActiveCategory" categoria}}>
         <img src={{categoria.iconUrl}} class="{{if categoria.activo "" "disabled"}}">
-        <div class="down">
+        <div class="down hidden-xs">
           <h5 class="a">{{categoria.nombre}}</h5>
         </div>
       </div>
@@ -141,7 +141,7 @@
 
     <div class="ele" {{action "toggleAllCategories"}}>
       <img src="/assets/img/category-icons/todos.jpg">
-      <div class="down">
+      <div class="down hidden-xs">
         <h5 class="a">Todos</h5>
       </div>
     </div>

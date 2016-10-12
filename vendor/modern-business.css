@@ -378,10 +378,12 @@ header.carousel {
     padding-bottom: 10px;
     border-bottom: 3px dashed #2f3196;
 }
+
 .ele img {
     width: 100%;
     height: auto;
 }
+
 .ele {
     height: auto;
     float: left;
@@ -683,7 +685,7 @@ header.carousel .fill {
     }
 }
 
-@media(max-width:767px) {
+@media(max-width: 767px) {
     .map {
         width: 100%;
         height: 276px;
@@ -711,21 +713,26 @@ header.carousel .fill {
         -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     }
+
     .container {
         padding-right: 0px;
         padding-left: 0px;
         margin-right: auto;
         margin-left: auto;
     }
+
     .img-portfolio {
         margin-bottom: 15px;
     }
+
     header.carousel .carousel {
         height: 70%;
     }
+
     .icon1, .icon17, .icon14, .icon20, .icon26, .icon7, .icon27, .icon28, .icon18, .icon30, .icon4, .icon24, .icon21, .icon9, .icon15, .icon13, .icon19, .icon25, .icon5, .icon22, .icon10, .icon12, .icon2, .icon3, .icon16, .icon8 {
         display: none;
     }
+
     .a {
         font-size: 7px;
         text-align: center;
@@ -748,15 +755,13 @@ header.carousel .fill {
         background-size: 100% auto;
         height: 170px;
     }
+
     .ele {
-        height: auto;
-        float: left;
-        box-sizing: border-box;
         width: 9%;
     }
 }
 
-@media(max-width:467px) {
+@media(max-width: 467px) {
     .col-xs-4, .col-xs-3, .col-xs-5, .col-xs-6 {
         width: 100%;
     }
@@ -785,12 +790,11 @@ header.carousel .fill {
         -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
         transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     }
+
     .ele {
-        height: auto;
-        float: left;
-        box-sizing: border-box;
         width: 100%;
     }
+
     .dtext h3 {
         width: 90%;
         margin: 0 auto;
