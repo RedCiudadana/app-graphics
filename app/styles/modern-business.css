@@ -376,7 +376,6 @@ header.carousel {
     padding-top: 20px;
     font-weight: bold;
     padding-bottom: 10px;
-    border-bottom: 3px dashed #2f3196;
 }
 
 .ele img {
@@ -402,7 +401,9 @@ header.carousel {
     margin: 20px auto;
     height: auto;
     overflow: hidden;
+    padding-top: 20px;
     padding-bottom: 20px;
+    border-top: 3px dashed #2f3196;
     border-bottom: 3px dashed #2f3196;
 }
 .timg {
@@ -797,14 +798,6 @@ header.carousel .fill {
 
     .dtext h3 {
         width: 90%;
-        margin: 0 auto;
-        color: #0b2f47;
-        text-transform: uppercase;
-        font-size: 26px;
-        padding-top: 20px;
-        font-weight: bold;
-        padding-bottom: 10px;
-        border-bottom: 3px dashed #2f3196;
     }
     .a {
         font-size: 16px;
