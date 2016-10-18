@@ -115,4 +115,8 @@ label {
     .dp h4 {
         text-align: center;
     }
+
+    .highcharts-tooltip {
+        text-align: center;
+    }
 }

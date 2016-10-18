@@ -1,17 +1,6 @@
 import Ember from 'ember';
 import formatMoney from 'accounting/format-money';
 
-let colors = [
-  '#047d99',
-  '#a7d270',
-  '#1b95e0',
-  '#fc8e0b',
-  '#dd1d58',
-  '#bcbec0',
-  '#1ddddd',
-  '#ffbc00'
-];
-
 export default Ember.Component.extend({
   municipalidad: null,
 
@@ -26,8 +15,10 @@ export default Ember.Component.extend({
       }
     },
     tooltip: {
-      formatter: function() {
-        return '<b>' + this.point.name + '</b>: ' + formatMoney(this.point.value, 'Q');
+      hideDelay: 100,
+      useHTML: true,
+      formatter() {
+        return '<b>' + this.point.name + '</b> <br /> ' + formatMoney(this.point.value, 'Q');
       }
     },
     plotOptions: {
@@ -38,6 +29,29 @@ export default Ember.Component.extend({
           }
         }
       }
+    },
+    responsive: {
+      rules: [{
+        condition: {
+          maxWidth: 467
+        },
+        chartOptions: {
+          plotOptions: {
+            treemap: {
+              dataLabels: {
+                enabled: false
+              }
+            }
+          }
+          // ,
+          // TODO: Pendiente de terminar
+          // tooltip: {
+          //   formatter() {
+          //     return '<b>' + this.point.name + '</b> <br /> ' + formatMoney(this.point.value, 'Q');
+          //   }
+          // }
+        }
+      }]
     }
   },
 

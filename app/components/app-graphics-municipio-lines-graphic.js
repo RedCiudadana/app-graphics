@@ -37,6 +37,25 @@ export default Ember.Component.extend({
     },
     legend: {
       enabled: false
+    },
+    responsive: {
+      rules: [{
+        condition: {
+          maxWidth: 467
+        },
+        chartOptions: {
+          yAxis: {
+            visible: false
+          }
+          // ,
+          // // TODO: Pendiente de terminar
+          // tooltip: {
+          //   pointFormatter: function() {
+          //     return this.series.name + ': ' + formatMoney(this.y / 1000, 'K Q') + '<br />';
+          //   },
+          // }
+        }
+      }]
     }
   },
 

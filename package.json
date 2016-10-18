@@ -48,7 +48,7 @@
     "ember-power-select": "1.0.0-beta.4",
     "ember-resolver": "^2.0.3",
     "ember-share": "0.1.1",
-    "highcharts": "4.2.5",
+    "highcharts": "5.0.0",
     "loader.js": "^4.0.1"
   }
 }
