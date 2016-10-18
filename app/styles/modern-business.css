@@ -445,11 +445,13 @@ header.carousel {
     width: 100%;
     margin-bottom: 2%;
 }
+
 .ty {
     width: 100%;
     height: auto;
     padding-top: 12%;
 }
+
 .text {
     text-align: justify;
     color: #0b3448;
@@ -634,16 +636,11 @@ header.carousel .fill {
     font-style: italic;
 }
 
-/* Footer Styles */
-/*footer {
-    margin: 50px 0;
-}*/
-
-/* Responsive Styles */
-@media(max-width:991px) {
+@media (max-width: 991px) {
     .customer-img, .img-related {
         margin-bottom: 30px;
     }
+
     label {
         display: inline-block;
         float: left;
@@ -655,6 +652,7 @@ header.carousel .fill {
         text-align: right;
         font-size: 12px;
     }
+
     .map {
         width: 100%;
         height: 521px;
@@ -662,6 +660,7 @@ header.carousel .fill {
         background-repeat: no-repeat;
         background-size: cover;
     }
+
     .after {
         width: 100%;
         padding-top: 15px;
@@ -671,14 +670,11 @@ header.carousel .fill {
         background-size: 100% auto;
         height: 166px;
     }
+
     .text {
-        text-align: justify;
-        color: #0b3448;
         font-size: 12px;
-        font-weight: bold;
-        width: 100%;
-        border-bottom: 1px solid #c4caca;
     }
+
     .container {
         width: 100%;
         padding-right: 0px;
@@ -686,7 +682,7 @@ header.carousel .fill {
     }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
     .map {
         width: 100%;
         height: 276px;
@@ -740,12 +736,7 @@ header.carousel .fill {
         color: #fff;
     }
     .text {
-        text-align: justify;
-        color: #0b3448;
         font-size: 11px;
-        font-weight: bold;
-        width: 100%;
-        border-bottom: 1px solid #c4caca;
     }
     .after {
         width: 100%;
@@ -762,16 +753,18 @@ header.carousel .fill {
     }
 }
 
-@media(max-width: 467px) {
+@media (max-width: 467px) {
     .col-xs-4, .col-xs-3, .col-xs-5, .col-xs-6 {
         width: 100%;
     }
+
     .container {
         padding-right: 0px;
         padding-left: 0px;
         margin-right: auto;
         margin-left: auto;
     }
+
     .form-control {
         display: block;
         width: 85%;
@@ -799,19 +792,23 @@ header.carousel .fill {
     .dtext h3 {
         width: 90%;
     }
+
     .a {
         font-size: 16px;
         text-align: center;
         color: #fff;
     }
+
     .text {
-        text-align: justify;
-        color: #0b3448;
         font-size: 15px;
-        font-weight: bold;
-        width: 100%;
-        border-bottom: 1px solid #c4caca;
+        text-align: left;
     }
+
+    .ty span.blue-text::before {
+        content: "\A";
+        white-space: pre;
+    }
+
     .pimg {
         width: 70%;
         height: auto;
@@ -819,6 +816,7 @@ header.carousel .fill {
         overflow: hidden;
         float: none;
     }
+
     .pimg1 {
         width: 70%;
         height: auto;
@@ -826,6 +824,7 @@ header.carousel .fill {
         float: none;
         overflow: hidden;
     }
+
     .after {
         width: 100%;
         padding-top: 15px;
@@ -835,6 +834,7 @@ header.carousel .fill {
         background-size: cover;
         height: 225px;
     }
+
     .timg {
         width: 100%;
         height: auto;
@@ -845,6 +845,7 @@ header.carousel .fill {
     .icon1, .icon17, .icon14, .icon20, .icon26, .icon7, .icon27, .icon28, .icon18, .icon30, .icon4, .icon24, .icon21, .icon9, .icon15, .icon13, .icon19, .icon25, .icon5, .icon22, .icon10, .icon12, .icon2, .icon3, .icon16, .icon8 {
         display: none;
     }
+
     .map {
         width: 100%;
         height: 185px;
@@ -852,6 +853,7 @@ header.carousel .fill {
         background-repeat: no-repeat;
         background-size: cover;
     }
+
     label {
         display: inline-block;
         float: left;
@@ -863,6 +865,10 @@ header.carousel .fill {
         width: 100%;    /* font-weight: 700; */
         text-align: center;
         font-size: 19px;
+    }
+
+    .app-graphics-municipio-data-table table {
+        table-layout: auto;
     }
 }
 

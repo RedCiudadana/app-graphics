@@ -2,10 +2,6 @@
   <div class="row">
     <div class="col-lg-12">
 
-      <div class="darrow">
-        <img src="/assets/img/down.png" />
-      </div>
-
       <div class="dtext">
         <h3>Presupuestos municipales</h3>
       </div>
@@ -39,7 +35,7 @@
 
       <div class="after">
         <div class="col-lg-12">
-          <label style="margin-right: 10px;">Municipalidad</label>
+          <label id="municipalidad-picking-label">Municipalidad</label>
           {{#power-select
             selected=currentMunicipalidad
             options=model.municipalidades

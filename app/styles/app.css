@@ -101,3 +101,18 @@ label {
 .filter-box label {
     margin-bottom: 0px;
 }
+
+#municipalidad-picking-label {
+    margin-right: 10px;
+}
+
+@media (max-width: 467px) {
+    #municipalidad-picking-label {
+        text-align: left;
+        margin: 0px;
+    }
+
+    .dp h4 {
+        text-align: center;
+    }
+}
