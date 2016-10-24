@@ -1,113 +1,107 @@
 <div class="container">
-  <div class="row">
-    <div class="col-lg-12">
+  <div class="dtext">
+    {{#link-to 'index'}}<h3>Información municipal</h3>{{/link-to}}
+  </div>
 
-      <div class="dtext">
-        {{#link-to 'index'}}<h3>Información municipal</h3>{{/link-to}}
-      </div>
+  <div class="three2">
+    <div class="three3">
 
-      <div class="three2">
-        <div class="three3">
-
-          <div class="col-lg-4 col-md-4 col-xs-4">
-            <div class="dp">
-              <h4>{{model.nombreMunicipio}}</h4>
-              <img src="{{model.alcaldeUrl}}" />
-            </div>
-          </div>
-
-          <div class="col-lg-5 col-md-5 col-xs-5">
-            <div class="ty">
-              <p class="text">
-                Departamento del municipio:
-                <span class="blue-text">{{model.departamento}}</span>
-              </p>
-              <p class="text">
-                Población total 2015:
-                <span class="blue-text">{{format-number model.poblacion}}</span>
-              </p>
-              <p class="text">
-                No. de aldeas y caseríos:
-                <span class="blue-text">{{format-number model.aldeasCaserios}}</span>
-              </p>
-              <p class="text">
-                Nombre del alcalde:
-                <span class="blue-text">{{model.nombreAlcalde}}</span>
-              </p>
-              <p class="text">
-                Partido político postulante:
-                <span class="blue-text">{{model.partidoPostulante}}</span>
-              </p>
-              <p class="text">
-                Partido político actual:
-                <span class="blue-text">{{model.partidoActual}}</span>
-              </p>
-              <p class="text">
-                Telefono institucional:
-                <span class="blue-text">{{model.telefonoInstitucion}}</span>
-              </p>
-              <p class="text">
-                Direccción institucional:
-                <span class="blue-text">{{model.direccionInstitucion}}</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-3 col-xs-3">
-            <div class="dp">
-              <img src="{{model.fotoInstitucion}}" style="padding-top: 20%;"/>
-              <p style="margin-top: 10px; margin-bottom: 2px;">
-                <a href="{{model.fbInstitucion}}">
-                  <img src="/assets/img/fb.png" />
-                  <span class="social-network">{{model.nombreMunicipio}}</span>
-                </a>
-              </p>
-              <p>
-                <a href="{{model.twInstitucion}}">
-                  <img src="/assets/img/tw.png" />
-                  <span class="social-network">{{model.nombreMunicipio}}</span>
-                </a>
-              </p>
-            </div>
-          </div>
-
+      <div class="col-lg-4 col-md-4 col-xs-4">
+        <div class="dp">
+          <h4>{{model.nombreMunicipio}}</h4>
+          <img src="{{model.alcaldeUrl}}" />
         </div>
       </div>
 
-      <div class="full">
-        <div class="box">
-
-          {{!-- Métricas generales --}}
-          <div class="metrics-container">
-            {{app-graphics-municipio-main-metrics municipalidad=model}}
-          </div>
-
-          <div class="col-lg-12">
-
-            {{!-- Gráfica de presupuestos históricos --}}
-            <div class="widget-lines-graphic-container">
-              {{app-graphics-municipio-lines-graphic municipio=model}}
-            </div>
-
-            {{#if model.informacionRubrosPresupuestoActual.length}}
-              {{!-- Treemap de distribución de presupuesto --}}
-              <div class="widget-treemap-graphic-container">
-                {{app-graphics-municipio-treemap-graphic municipalidad=model}}
-              </div>
-
-              {{!-- Tabla de distribución de presupuesto --}}
-              <div class="app-graphics-municipio-data-table">
-                {{app-graphics-municipio-data-table municipalidad=model}}
-              </div>
-            {{else}}
-              <div class="text-center" style="margin: 24px 0px;">
-                <h3>No se cuenta con información del desglose del presupuesto actual</h3>
-              </div>
-            {{/if}}
-
-          </div>
-
+      <div class="col-lg-5 col-md-5 col-xs-5">
+        <div class="ty">
+          <p class="text">
+            Departamento del municipio:
+            <span class="blue-text">{{model.departamento}}</span>
+          </p>
+          <p class="text">
+            Población total 2015:
+            <span class="blue-text">{{format-number model.poblacion}}</span>
+          </p>
+          <p class="text">
+            No. de aldeas y caseríos:
+            <span class="blue-text">{{format-number model.aldeasCaserios}}</span>
+          </p>
+          <p class="text">
+            Nombre del alcalde:
+            <span class="blue-text">{{model.nombreAlcalde}}</span>
+          </p>
+          <p class="text">
+            Partido político postulante:
+            <span class="blue-text">{{model.partidoPostulante}}</span>
+          </p>
+          <p class="text">
+            Partido político actual:
+            <span class="blue-text">{{model.partidoActual}}</span>
+          </p>
+          <p class="text">
+            Telefono institucional:
+            <span class="blue-text">{{model.telefonoInstitucion}}</span>
+          </p>
+          <p class="text">
+            Direccción institucional:
+            <span class="blue-text">{{model.direccionInstitucion}}</span>
+          </p>
         </div>
+      </div>
+
+      <div class="col-lg-3 col-md-3 col-xs-3">
+        <div class="dp">
+          <img src="{{model.fotoInstitucion}}" style="padding-top: 20%;"/>
+          <p style="margin-top: 10px; margin-bottom: 2px;">
+            <a href="{{model.fbInstitucion}}">
+              <img src="/assets/img/fb.png" />
+              <span class="social-network">{{model.nombreMunicipio}}</span>
+            </a>
+          </p>
+          <p>
+            <a href="{{model.twInstitucion}}">
+              <img src="/assets/img/tw.png" />
+              <span class="social-network">{{model.nombreMunicipio}}</span>
+            </a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="full">
+    <div class="box">
+
+      {{!-- Métricas generales --}}
+      <div class="metrics-container">
+        {{app-graphics-municipio-main-metrics municipalidad=model}}
+      </div>
+
+      <div class="col-lg-12">
+
+        {{!-- Gráfica de presupuestos históricos --}}
+        <div class="widget-lines-graphic-container">
+          {{app-graphics-municipio-lines-graphic municipio=model}}
+        </div>
+
+        {{#if model.informacionRubrosPresupuestoActual.length}}
+          {{!-- Treemap de distribución de presupuesto --}}
+          <div class="widget-treemap-graphic-container">
+            {{app-graphics-municipio-treemap-graphic municipalidad=model}}
+          </div>
+
+          {{!-- Tabla de distribución de presupuesto --}}
+          <div class="app-graphics-municipio-data-table">
+            {{app-graphics-municipio-data-table municipalidad=model}}
+          </div>
+        {{else}}
+          <div class="text-center" style="margin: 24px 0px;">
+            <h3>No se cuenta con información del desglose del presupuesto actual</h3>
+          </div>
+        {{/if}}
+
       </div>
 
     </div>
