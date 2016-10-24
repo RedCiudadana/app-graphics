@@ -752,6 +752,9 @@ header.carousel .fill {
     }
 }
 
+/**
+ * Dispositivos pequeños para abajo
+ */
 @media (max-width: 467px) {
     .col-xs-4, .col-xs-3, .col-xs-5, .col-xs-6 {
         width: 100%;
@@ -861,13 +864,9 @@ header.carousel .fill {
         max-width: 100%;
         margin-bottom: 5px;
         margin-left: 10px;
-        width: 100%;    /* font-weight: 700; */
+        width: 100%;
         text-align: center;
         font-size: 19px;
-    }
-
-    .app-graphics-municipio-data-table table {
-        table-layout: auto;
     }
 }
 

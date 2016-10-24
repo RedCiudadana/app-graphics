@@ -125,4 +125,9 @@ label {
     .highcharts-tooltip {
         text-align: center;
     }
+
+    .app-graphics-municipio-data-table table,
+    .ranking-data-table table {
+        table-layout: auto;
+    }
 }
