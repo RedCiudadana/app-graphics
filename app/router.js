@@ -9,9 +9,9 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('mapa', { path: '/mapa' });
 
-  this.route('municipio', { path: '/municipalidad/:municipalidad' });
-
+  this.route('analiza');
   this.route('compara');
+  this.route('municipio', { path: '/municipalidad/:municipalidad' });
 
   this.route('ranking', function() {
     this.route('presupuesto');

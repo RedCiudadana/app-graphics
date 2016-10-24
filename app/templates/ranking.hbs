@@ -1,19 +1,15 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
+<div class="col-lg-12">
 
-      <div class="garrow">
-        <img src="/assets/img/garrow1.png" />
-      </div>
-
-      <div class="dtext" style="background:#FFF;">
-        {{#link-to 'ranking.index'}}<h3>Ranking municipal</h3>{{/link-to}}
-      </div>
-
-      <div class="ranking-data-table">
-        {{outlet}}
-      </div>
-
-    </div>
+  <div class="garrow">
+    <img src="/assets/img/garrow1.png" />
   </div>
+
+  <div class="dtext">
+    {{#link-to 'ranking.index'}}<h3>Ranking municipal</h3>{{/link-to}}
+  </div>
+
+  <div class="ranking-data-table">
+    {{outlet}}
+  </div>
+
 </div>
