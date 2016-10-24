@@ -9,7 +9,7 @@ body {
      * Required padding for .navbar-fixed-top. Remove if using .navbar-static-top.
      * Change if height of navigation changes.
      */
-    padding-top: 00px;
+    padding-top: 0px;
 }
 
 .img-portfolio {
@@ -554,7 +554,7 @@ header.carousel {
     padding: 10px;
 }
 .dp h4 {
-    text-align: justify;
+    text-align: center;
     font-size: 22px;
     color: #0b3448;
     font-weight: bold;
@@ -675,11 +675,11 @@ header.carousel .fill {
         font-size: 12px;
     }
 
-    .container {
+    /*.container {
         width: 100%;
         padding-right: 0px;
         padding-left: 0px;
-    }
+    }*/
 }
 
 @media (max-width: 767px) {

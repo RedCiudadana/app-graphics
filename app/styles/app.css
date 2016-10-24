@@ -9,6 +9,9 @@ label {
     font-size: 19px;
 }
 
+/**
+ * Dispositivos medios para arriba
+ */
 @media (min-width: 768px) {
     .form-inline .input-group .input-group-btn {
         width: 1%;
@@ -106,6 +109,9 @@ label {
     margin-right: 10px;
 }
 
+/**
+ * Dispositivos pequeños para abajo
+ */
 @media (max-width: 467px) {
     #municipalidad-picking-label {
         text-align: left;
