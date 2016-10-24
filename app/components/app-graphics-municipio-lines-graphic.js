@@ -47,13 +47,6 @@ export default Ember.Component.extend({
           yAxis: {
             visible: false
           }
-          // ,
-          // // TODO: Pendiente de terminar
-          // tooltip: {
-          //   pointFormatter: function() {
-          //     return this.series.name + ': ' + formatMoney(this.y / 1000, 'K Q') + '<br />';
-          //   },
-          // }
         }
       }]
     }
