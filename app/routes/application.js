@@ -8,9 +8,10 @@ export default Ember.Route.extend({
   tabletop: Ember.inject.service('tabletop'),
 
   model() {
-    return Ember.RSVP.hash({
+    let tableTop = this.get('tabletop');
 
-      municipalidades: this.get('tabletop').fetch('data-municipalidades').then((data) => {
+    return Ember.RSVP.hash({
+      municipalidades: tableTop.fetch('data-municipalidades').then((data) => {
         return Ember.A(data).map(function (e) {
           let wrappedObject = municipalidadModel.create(e);
           wrappedObject
@@ -51,12 +52,11 @@ export default Ember.Route.extend({
         });
       }),
 
-      configRenglonesColores: this.get('tabletop').fetch('config-renglones-colores').then((data) => {
+      configRenglonesColores: tableTop.fetch('config-renglones-colores').then((data) => {
         return Ember.A(data).map(function (e) {
           return municipalidadModel.create(e);
         });
       })
-
     });
   }
 });

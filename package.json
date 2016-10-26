@@ -43,7 +43,7 @@
     "ember-highcharts": "0.4.4",
     "ember-islands": "1.0.2",
     "ember-leaflet": "2.2.7",
-    "ember-light-table": "1.1.0",
+    "ember-light-table": "1.5.1",
     "ember-load-initializers": "^0.5.1",
     "ember-power-select": "1.0.0-beta.4",
     "ember-resolver": "^2.0.3",

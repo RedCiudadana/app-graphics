@@ -108,6 +108,11 @@ label {
 #municipalidad-picking-label {
     margin-right: 10px;
 }
+.analiza .pimg,
+.analiza .pimg1 {
+    width: 55%;
+    max-width: 190px;
+}
 
 /**
  * Dispositivos pequeños para abajo

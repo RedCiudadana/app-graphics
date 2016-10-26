@@ -464,6 +464,7 @@ header.carousel {
     padding-bottom: 3%;
     overflow: hidden;
 }
+
 .pimg1 {
     width: 70%;
     height: auto;
@@ -520,6 +521,7 @@ header.carousel {
     transform: scale(1.1);
     cursor: pointer;
 }
+
 .three3 {
     width: 90%;
     margin: 2% auto 0;
@@ -673,12 +675,6 @@ header.carousel .fill {
     .text {
         font-size: 12px;
     }
-
-    /*.container {
-        width: 100%;
-        padding-right: 0px;
-        padding-left: 0px;
-    }*/
 }
 
 @media (max-width: 767px) {
@@ -812,19 +808,11 @@ header.carousel .fill {
     }
 
     .pimg {
-        width: 70%;
-        height: auto;
-        margin: 5% auto 0;
-        overflow: hidden;
         float: none;
     }
 
     .pimg1 {
-        width: 70%;
-        height: auto;
-        margin: 5% auto 0;
         float: none;
-        overflow: hidden;
     }
 
     .after {

@@ -1,1 +1,26 @@
-Analiza
+<div class="col-lg-12 analiza">
+
+  <div class="garrow">
+    <img src="/assets/img/garrow1.png" />
+  </div>
+
+  <div class="dtext">
+    {{#link-to 'index'}}<h3>Analiza</h3>{{/link-to}}
+  </div>
+
+  {{#each municipalidadesAgrupadas as |municipalidadesSubArray|}}
+    <div class="row row-eq-height">
+      {{#each municipalidadesSubArray as |municipalidad index|}}
+        <div class="col-lg-6 col-md-6 col-xs-6">
+          <div class="{{if index 'pimg1' 'pimg'}}">
+            {{#link-to 'municipio' municipalidad.municipio}}
+              <img src="{{municipalidad.fotoInstitucion}}" />
+
+              <div style="text-align: center;">{{municipalidad.nombreMunicipio}}</div>
+            {{/link-to}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}
+</div>
