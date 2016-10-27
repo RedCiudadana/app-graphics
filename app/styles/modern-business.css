@@ -637,6 +637,9 @@ header.carousel .fill {
     font-style: italic;
 }
 
+/**
+ * Small devices (tablets) down
+ */
 @media (max-width: 991px) {
     .customer-img, .img-related {
         margin-bottom: 30px;
@@ -677,6 +680,9 @@ header.carousel .fill {
     }
 }
 
+/**
+ * Extra small devices (phones) down
+ */
 @media (max-width: 767px) {
     .map {
         width: 100%;
@@ -749,7 +755,7 @@ header.carousel .fill {
 }
 
 /**
- * Dispositivos pequeños para abajo
+ * Ultra small devices (not event phones) down
  */
 @media (max-width: 467px) {
     .col-xs-4, .col-xs-3, .col-xs-5, .col-xs-6 {

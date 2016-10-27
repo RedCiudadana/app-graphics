@@ -1,11 +1,86 @@
-<div class="container">
+<div class="col-lg-12" id="compara">
+
+  <div class="garrow">
+    <img src="/assets/img/garrow1.png" />
+  </div>
+
+  <div class="dtext">
+    {{#link-to 'index'}}<h3>Compara</h3>{{/link-to}}
+  </div>
+
   <div class="row">
-    <div class="col-lg-12">
-
-      Sup yo
-
-      {{outlet}}
-
+    <div class="col-xs-6 municipalidad-select-left">
+        {{#power-select
+          selected=municipalidadLeft
+          options=municipalidades
+          onchange=(action 'selectMunicipalidadLeft')
+          searchField='nombreMunicipio'
+            as |municipalidadLeftOption|
+        }}
+          <strong>{{municipalidadLeftOption.nombreMunicipio}}</strong>
+          <small>{{municipalidadLeftOption.departamento}}</small>
+        {{/power-select}}
+    </div>
+    <div class="col-xs-6 municipalidad-select-right">
+        {{#power-select
+          selected=municipalidadRight
+          options=municipalidades
+          onchange=(action 'selectMunicipalidadRight')
+          searchField='nombreMunicipio'
+            as |municipalidadRightOption|
+        }}
+          <strong>{{municipalidadRightOption.nombreMunicipio}}</strong>
+          <small>{{municipalidadRightOption.departamento}}</small>
+        {{/power-select}}
     </div>
   </div>
+
+  <div class="panel panel-default presupuesto-actual">
+    <div class="panel-heading">
+      <h3 class="panel-title">Presupuesto actual</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-6">{{format-money municipalidadLeft.presupuestoActualMA symbol='Q'}}</div>
+        <div class="col-sm-6">{{format-money municipalidadRight.presupuestoActualMA symbol='Q'}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default habitantes">
+    <div class="panel-heading">
+      <h3 class="panel-title">Habitantes</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-6">{{municipalidadLeft.habitantes}}</div>
+        <div class="col-sm-6">{{municipalidadRight.habitantes}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default ingreso-total">
+    <div class="panel-heading">
+      <h3 class="panel-title">Ingreso total</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-6">{{format-money municipalidadLeft.IngresosPropios symbol='Q'}}</div>
+        <div class="col-sm-6">{{format-money municipalidadRight.IngresosPropios symbol='Q'}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default gasto-total">
+    <div class="panel-heading">
+      <h3 class="panel-title">Gasto total</h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-sm-6">{{format-money municipalidadLeft.gastoTotal symbol='Q'}}</div>
+        <div class="col-sm-6">{{format-money municipalidadRight.gastoTotal symbol='Q'}}</div>
+      </div>
+    </div>
+  </div>
+
 </div>
